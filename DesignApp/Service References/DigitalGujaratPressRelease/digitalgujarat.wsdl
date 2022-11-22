@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PressReleasesFor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PR_Date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PressReleasesForResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PressReleasesForResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LatestPressReleases">
+        <s:complexType />
+      </s:element>
+      <s:element name="LatestPressReleasesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LatestPressReleasesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PressReleasesForSoapIn">
+    <wsdl:part name="parameters" element="tns:PressReleasesFor" />
+  </wsdl:message>
+  <wsdl:message name="PressReleasesForSoapOut">
+    <wsdl:part name="parameters" element="tns:PressReleasesForResponse" />
+  </wsdl:message>
+  <wsdl:message name="LatestPressReleasesSoapIn">
+    <wsdl:part name="parameters" element="tns:LatestPressReleases" />
+  </wsdl:message>
+  <wsdl:message name="LatestPressReleasesSoapOut">
+    <wsdl:part name="parameters" element="tns:LatestPressReleasesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DigitalGujaratSoap">
+    <wsdl:operation name="PressReleasesFor">
+      <wsdl:input message="tns:PressReleasesForSoapIn" />
+      <wsdl:output message="tns:PressReleasesForSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LatestPressReleases">
+      <wsdl:input message="tns:LatestPressReleasesSoapIn" />
+      <wsdl:output message="tns:LatestPressReleasesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DigitalGujaratSoap" type="tns:DigitalGujaratSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PressReleasesFor">
+      <soap:operation soapAction="http://tempuri.org/PressReleasesFor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LatestPressReleases">
+      <soap:operation soapAction="http://tempuri.org/LatestPressReleases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DigitalGujaratSoap12" type="tns:DigitalGujaratSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PressReleasesFor">
+      <soap12:operation soapAction="http://tempuri.org/PressReleasesFor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LatestPressReleases">
+      <soap12:operation soapAction="http://tempuri.org/LatestPressReleases" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DigitalGujarat">
+    <wsdl:port name="DigitalGujaratSoap" binding="tns:DigitalGujaratSoap">
+      <soap:address location="http://gujaratinformation.net/gujaratinformation/services/digitalgujarat.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DigitalGujaratSoap12" binding="tns:DigitalGujaratSoap12">
+      <soap12:address location="http://gujaratinformation.net/gujaratinformation/services/digitalgujarat.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

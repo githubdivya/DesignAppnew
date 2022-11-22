@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="enResource1.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="enResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guResource1.Text" xml:space="preserve">
+    <value>ગુજરાતી</value>
+  </data>
+  <data name="guResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="localize10Resource1.Text" xml:space="preserve">
+    <value>મહેસૂલ</value>
+  </data>
+  <data name="localize11Resource1.Text" xml:space="preserve">
+    <value>પંચાયત</value>
+  </data>
+  <data name="localize12Resource1.Text" xml:space="preserve">
+    <value>વ્યવ્સાય</value>
+  </data>
+  <data name="localize13Resource1.Text" xml:space="preserve">
+    <value>પ્રવાસન</value>
+  </data>
+  <data name="localize14Resource1.Text" xml:space="preserve">
+    <value>સંપર્ક</value>
+  </data>
+  <data name="localize15Resource1.Text" xml:space="preserve">
+    <value>વેબસાઈટ વિકાસ નીતિ</value>
+  </data>
+  <data name="localize16Resource1.Text" xml:space="preserve">
+    <value>તાલીમ નીતિ</value>
+  </data>
+  <data name="localize17Resource1.Text" xml:space="preserve">
+    <value>કુલ સેવા પ્રદાતા નીતિ</value>
+  </data>
+  <data name="localize18Resource1.Text" xml:space="preserve">
+    <value>ભાષા સ્ટાન્ડર્ડાઇઝેશન નીતિ</value>
+  </data>
+  <data name="localize19Resource1.Text" xml:space="preserve">
+    <value>IT નીતિ</value>
+  </data>
+  <data name="localize1Resource1.Text" xml:space="preserve">
+    <value>મારું સ્થાન : </value>
+  </data>
+  <data name="localize20Resource1.Text" xml:space="preserve">
+    <value>કાનૂની</value>
+  </data>
+  <data name="localize21Resource1.Text" xml:space="preserve">
+    <value>ડિજિટલ ગુજરાતમાં નોંધણી</value>
+  </data>
+  <data name="localize22Resource1.Text" xml:space="preserve">
+    <value>નાગરિક ચેતવણીઓ</value>
+  </data>
+  <data name="localize23Resource1.Text" xml:space="preserve">
+    <value>ટ્રેડિંગ</value>
+  </data>
+  <data name="localize24Resource1.Text" xml:space="preserve">
+    <value>ગુજરાત વિહાંગવા લોક્ન</value>
+  </data>
+  <data name="localize25Resource1.Text" xml:space="preserve">
+    <value>ગુજરાતનો ઈતહાસ</value>
+  </data>
+  <data name="localize26Resource1.Text" xml:space="preserve">
+    <value>પરીવહન સુવીધાઓ</value>
+  </data>
+  <data name="localize27Resource1.Text" xml:space="preserve">
+    <value>નાગરિક સેવાઓ</value>
+  </data>
+  <data name="localize28Resource1.Text" xml:space="preserve">
+    <value>કાયદાકીય સેવાઓ</value>
+  </data>
+  <data name="localize29Resource1.Text" xml:space="preserve">
+    <value>નાણાંકીય સેવા</value>
+  </data>
+  <data name="localize2Resource1.Text" xml:space="preserve">
+    <value>લોગીન</value>
+  </data>
+  <data name="localize30Resource1.Text" xml:space="preserve">
+    <value>એકટ અને નિયમો</value>
+  </data>
+  <data name="localize31Resource1.Text" xml:space="preserve">
+    <value>બજેટ</value>
+  </data>
+  <data name="localize32Resource1.Text" xml:space="preserve">
+    <value>કાયદાઓ અને નિયમો</value>
+  </data>
+  <data name="localize33Resource1.Text" xml:space="preserve">
+    <value>મામલતદાર કચેરીઓ</value>
+  </data>
+  <data name="localize34Resource1.Text" xml:space="preserve">
+    <value>પ્રાંત કચેરીઓ</value>
+  </data>
+  <data name="localize35Resource1.Text" xml:space="preserve">
+    <value>જનસેવા કેન્દ્ર</value>
+  </data>
+  <data name="localize36Resource1.Text" xml:space="preserve">
+    <value>આર ટી આઈ</value>
+  </data>
+  <data name="localize37Resource1.Text" xml:space="preserve">
+    <value>નાગરિક ચાર્ટર</value>
+  </data>
+  <data name="localize38Resource1.Text" xml:space="preserve">
+    <value>સાઇટમેપ</value>
+  </data>
+  <data name="localize39Resource1.Text" xml:space="preserve">
+    <value>પ્રતિસાદ</value>
+  </data>
+  <data name="localize3Resource1.Text" xml:space="preserve">
+    <value>વ્યવ્સાય સેવા</value>
+  </data>
+  <data name="localize40Resource1.Text" xml:space="preserve">
+    <value>ઉપયોગની શરતો</value>
+  </data>
+  <data name="localize41Resource1.Text" xml:space="preserve">
+    <value>ગોપનીયતા નીતિ</value>
+  </data>
+  <data name="localize42Resource1.Text" xml:space="preserve">
+    <value>કૉપિરાઇટ નીતિ</value>
+  </data>
+  <data name="localize43Resource1.Text" xml:space="preserve">
+    <value>હાયપરલીન્ક નીતિ</value>
+  </data>
+  <data name="localize44Resource1.Text" xml:space="preserve">
+    <value>ઉપલ્બધતા નિવેદન</value>
+  </data>
+  <data name="localize45Resource1.Text" xml:space="preserve">
+    <value>આમારા વિષે</value>
+  </data>
+  <data name="localize45Resource1.Text1" xml:space="preserve">
+    <value>અમારા વિશે</value>
+  </data>
+  <data name="localize46Resource1.Text" xml:space="preserve">
+    <value>સેવા</value>
+  </data>
+  <data name="localize46Resource1.Text1" xml:space="preserve">
+    <value>સેવાઓનો વિસ્તાર</value>
+  </data>
+  <data name="localize47Resource1.Text" xml:space="preserve">
+    <value>નીતિ</value>
+  </data>
+  <data name="localize47Resource1.Text1" xml:space="preserve">
+    <value>નીતિ</value>
+  </data>
+  <data name="localize48Resource1.Text" xml:space="preserve">
+    <value>કચેરીઓ</value>
+  </data>
+  <data name="localize48Resource1.Text1" xml:space="preserve">
+    <value>કચેરીઓ</value>
+  </data>
+  <data name="localize49Resource1.Text" xml:space="preserve">
+    <value>મદદ</value>
+  </data>
+  <data name="localize49Resource1.Text1" xml:space="preserve">
+    <value>મદદ</value>
+  </data>
+  <data name="localize4Resource1.Text" xml:space="preserve">
+    <value>ગર્વન્મેન્ટ ટુ ગર્વન્મેન્ટ</value>
+  </data>
+  <data name="localize50Resource1.Text" xml:space="preserve">
+    <value>સંપર્ક</value>
+  </data>
+  <data name="localize51Resource1.Text" xml:space="preserve">
+    <value>સૌજન્ય :: એનઆઇસી - જીજેએસસી</value>
+  </data>
+  <data name="localize52Resource1.Text" xml:space="preserve">
+    <value>ગુજરાત પ્રવાસન</value>
+  </data>
+  <data name="localize53Resource1.Text" xml:space="preserve">
+    <value>મુલાકાત સ્થાનો</value>
+  </data>
+  <data name="localize54Resource1.Text" xml:space="preserve">
+    <value>કી આકર્ષણ</value>
+  </data>
+  <data name="localize55Resource1.Text" xml:space="preserve">
+    <value>રાજ્ય પ્રવાસન ઓનલાઇન બુકિંગ</value>
+  </data>
+  <data name="localize56Resource1.Text" xml:space="preserve">
+    <value>સરકારી નોકરીઓ</value>
+  </data>
+  <data name="localize57Resource1.Text" xml:space="preserve">
+    <value>નીતિઓ</value>
+  </data>
+  <data name="localize58Resource1.Text" xml:space="preserve">
+    <value>એમએસએમઇ યોજનાઓ</value>
+  </data>
+  <data name="localize59Resource1.Text" xml:space="preserve">
+    <value>કોટેજ અને ગ્રામ્ય ઉદ્યોગ યોજનાઓ</value>
+  </data>
+  <data name="localize5Resource1.Text" xml:space="preserve">
+    <value>આંકડાકીય વિગતો</value>
+  </data>
+  <data name="localize60Resource1.Text" xml:space="preserve">
+    <value>એક બિઝનેસ શરૂ</value>
+  </data>
+  <data name="localize61Resource1.Text" xml:space="preserve">
+    <value>ઉદ્યોગ ઈન્ટરફેસ સેલ</value>
+  </data>
+  <data name="localize62Resource1.Text" xml:space="preserve">
+    <value>ગીર - ઓનલાઇન પરમિટ બુકિંગ</value>
+  </data>
+  <data name="localize63Resource1.Text" xml:space="preserve">
+    <value>સોમનાથ</value>
+  </data>
+  <data name="localize64Resource1.Text" xml:space="preserve">
+    <value>સશક્તિકરણ</value>
+  </data>
+  <data name="localize6Resource1.Text" xml:space="preserve">
+    <value>નાગરિક સેવા</value>
+  </data>
+  <data name="localize72Resource1.Text" xml:space="preserve">
+    <value>નોન-ક્રિમી-લેયર અંગેનું પ્રમાણપત્ર</value>
+  </data>
+  <data name="localize73Resource1.Text" xml:space="preserve">
+    <value>નોન-ક્રિમી-લેયર અંગેનું પ્રમાણપત્ર (ભારત સરકાર માટે)</value>
+  </data>
+  <data name="localize74Resource1.Text" xml:space="preserve">
+    <value>અઘિનિવાસ પ્રમાણપત્ર આપવા બાબત.</value>
+  </data>
+  <data name="localize75Resource1.Text" xml:space="preserve">
+    <value>વારસાઇ પ્રમાણપત્ર આપવું</value>
+  </data>
+  <data name="localize76Resource1.Text" xml:space="preserve">
+    <value>સીનિયર સિટીઝન પ્રમાણપત્ર</value>
+  </data>
+  <data name="localize77Resource1.Text" xml:space="preserve">
+    <value>ઘાર્મિક લઘુમતી નું પ્રમાણપત્ર</value>
+  </data>
+  <data name="localize78Resource1.Text" xml:space="preserve">
+    <value>વરિષ્ઠ નાગરિક પ્રમાણપત્ર</value>
+  </data>
+  <data name="localize79Resource1.Text" xml:space="preserve">
+    <value>ધાર્મિક લઘુમતી પ્રમાણપત્ર</value>
+  </data>
+  <data name="localize7Resource1.Text" xml:space="preserve">
+    <value>ઓફિસ લોગિન</value>
+  </data>
+  <data name="localize80Resource1.Text" xml:space="preserve">
+    <value>આવકનો દાખલો આપવા બાબત</value>
+  </data>
+  <data name="localize81Resource1.Text" xml:space="preserve">
+    <value>ઓ.બી.સી.દાખલો આપવા</value>
+  </data>
+  <data name="localize82Resource1.Text" xml:space="preserve">
+    <value>જ્ઞાતી (SC/ST) નો દાખલો આપવા બાબત.</value>
+  </data>
+  <data name="localize83Resource1.Text" xml:space="preserve">
+    <value>આર્થિક રીતે પછાતવર્ગ અંગેનુ પ્રમાણપત્ર</value>
+  </data>
+  <data name="localize84Resource1.Text" xml:space="preserve">
+    <value>વિધવા હોવા અંગેનુ પ્રમાણપત્ર</value>
+  </data>
+  <data name="localize85Resource1.Text" xml:space="preserve">
+    <value>આવકનો દાખલો આપવા બાબત</value>
+  </data>
+  <data name="localize86Resource1.Text" xml:space="preserve">
+    <value>જ્ઞાતી (SC/ST) નો દાખલો આપવા બાબત.</value>
+  </data>
+  <data name="localize87Resource1.Text" xml:space="preserve">
+    <value>ઘાર્મિક લઘુમતી નું પ્રમાણપત્ર</value>
+  </data>
+  <data name="localize88Resource1.Text" xml:space="preserve">
+    <value>સામાજિક અને શૈક્ષણિક રીતે પછાતવર્ગ નું પ્રમાણપત્ર</value>
+  </data>
+  <data name="localize89Resource1.Text" xml:space="preserve">
+    <value>વધુ</value>
+  </data>
+  <data name="localize8Resource1.Text" xml:space="preserve">
+    <value>સેવા</value>
+  </data>
+  <data name="localize9Resource1.Text" xml:space="preserve">
+    <value>રોજગાર</value>
+  </data>
+  <data name="localizeofficedetail1.Text" xml:space="preserve">
+    <value>વિગતવાર ઓફિસો</value>
+  </data>
+  <data name="sitemapResource1.Text" xml:space="preserve">
+    <value>સાઇટમેપ</value>
+  </data>
+  <data name="siteversionResource1.Text" xml:space="preserve">
+    <value>સાઇટનું વર્જન:</value>
+  </data>
+  <data name="sitevisitedResource1.Text" xml:space="preserve">
+    <value>સાઇટ દર્શનાર્થી:</value>
+  </data>
+</root>

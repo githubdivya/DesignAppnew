@@ -1,0 +1,696 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Default.master.vb" Inherits="DesignApp._Default" %>
+
+<!DOCTYPE html>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Digital Gujarat</title>
+    <!-- core CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="images/ico/favicon.ico" />
+    <%--<script src="js/jquery-2.2.2.min.js"></script>--%>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <%-- <script src="js/MapsOnline.js"></script>--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form runat="server">
+
+
+        <div id="wrapper">
+
+            <header id="header cf">
+                <div class="sett">
+                    <div class="container">
+                        <div class="col-md-3 col-xs-12">
+                            <div class="pull-left">
+                                <button>Default</button>
+                                <button>High Contrast</button>
+                                <button>Text Only</button>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6 ">
+                            <div class="screen pull-left">
+                                <a href="#">Screen reader access</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <div class="skip pull-left">
+                                <a href="#">Skip to main content</a>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <div class="langOption pull-right">
+                                <asp:LinkButton ID="en" runat="server" meta:resourcekey="enResource1" Text="English"></asp:LinkButton>
+                                <asp:LinkButton ID="gu" runat="server" meta:resourcekey="guResource1" Text="ગુજરાતી"></asp:LinkButton>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-12 pull-right">
+                            <div class="pull-right">
+                                <button>A<sup>-</button>
+                                <button>A</button>
+                                <button>A<sup>+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                           <%-- <div class="location pull-left">
+                                <i class="fa fa-map-marker"></i>&nbsp;&nbsp;<asp:Localize ID="localize1" runat="server" meta:resourcekey="localize1Resource1" Text="My Location:"></asp:Localize>&nbsp;
+                                <span class="yellow">
+                                    <asp:Label ID="lbllocation" runat="server"></asp:Label>
+                                    <%--<asp:LinkButton ID="lnkchangecity" Text="Change City" runat="server"> </asp:LinkButton>--%>
+                              <%--  </span>
+                            </div>--%>
+                            <div class="setting pull-right">
+                                <a href="#">Setting &nbsp;<i class="fa fa-cog"></i></a>
+                            </div>
+                            <div class="user pull-right">
+                                <asp:LinkButton ID="lnklogin" runat="server"> 
+                                <asp:Localize ID="localize2" runat="server" meta:resourcekey="localize2Resource1" Text="Login "></asp:Localize>
+                                    &nbsp;<i class="fa fa-user"></i></asp:LinkButton>
+                                <%--<asp:LinkButton ID="lnklogin" runat="server"> </asp:LinkButton>
+                                <a href='<%=Convert.ToString("../CitizenApp/Citizen/CitizenWEBUI/CitizenLogin.aspx?City=") + lbllocation.Text%>'>
+                                    <asp:Localize ID="localize2" runat="server" meta:resourcekey="localize2Resource1" Text="Login "></asp:Localize>
+                                    &nbsp;<i class="fa fa-user"></i></a>--%>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="navbar-wrap" id="navbar-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav class="navbar navbar-default w3_megamenu">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="pull-left men">MENU</span>
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="https://www.digitalgujarat.gov.in/">
+                                        <img src='<%=ResolveUrl("~/images/logo.png")%>' title="Digital Gujarat" style="z-index: -1" /></a>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown w3_megamenu-fw">
+                                            <a href="#" class="dropdown-toggle service" data-toggle="dropdown">
+                                                <asp:Localize ID="localize8" runat="server" meta:resourcekey="localize8Resource1" Text="Services1"></asp:Localize></a>
+                                            <ul class="dropdown-menu fullwidth" role="menu">
+                                                <li class="w3_megamenu-content">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <%-- <li><a href="#">
+                                                                    <asp:Localize ID="localize5" runat="server" Text="Gujarat Online Services" meta:resourcekey="localize5Resource1"></asp:Localize></a></li>--%>
+                                                                <li><a href='<%=ResolveUrl("~/Citizen/CitizenService.aspx")%>'>
+                                                                    <asp:Localize ID="localize6" runat="server" Text="Citizen Services" meta:resourcekey="localize6Resource1"></asp:Localize>
+                                                                </a></li>
+                                                               <%-- <li><a href='<%=ResolveUrl("~/CitizenApp/Citizen/CitizenWEBUI/Registration.aspx?City="+lbllocation.Text ) %>'>
+                                                                    <asp:Localize ID="localize21" runat="server" Text="Digital Gujarat Registration" meta:resourcekey="localize21Resource1"></asp:Localize></a></li>--%>
+                                                                <li><a href="https://incometaxindiaefiling.gov.in/e-Filing/Services/KnowYourPanLink.html">
+                                                                    <asp:Localize ID="localize7" runat="server" Text="PAN Card" meta:resourcekey="localize100Resource1"></asp:Localize></a></li>
+
+                                                                <%--<li><a href="#">
+                                                                    <asp:Localize ID="localize3" runat="server" meta:resourcekey="localize3Resource1" Text="Business Services"></asp:Localize>
+                                                                </a></li>
+                                                                <li><a href="#">
+                                                                    <asp:Localize ID="localize4" runat="server" meta:resourcekey="localize4Resource1" Text="Gov to Gov Services"></asp:Localize>
+                                                                </a></li>
+                                                                <li><a href="https://www.digitalgujarat.gov.in/OfficeApp/frmMain.aspx">
+                                                                    <asp:Localize ID="localize7" runat="server" Text="Office Login" meta:resourcekey="localize7Resource1"></asp:Localize>
+                                                                </a></li>--%>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="https://digilocker.gov.in">
+                                                                    <asp:Localize ID="localize15" runat="server" Text="Digital Locker" meta:resourcekey="localize101Resource1"></asp:Localize></a></li>
+                                                                <li><a href="http://electoralsearch.in">
+                                                                    <asp:Localize ID="localize16" runat="server" Text="Election ID" meta:resourcekey="localize102Resource1"></asp:Localize></a></li>
+                                                                <li><a href="https://vahan.nic.in/nrservices/faces/user/jsp/SearchStatus.jsp">
+                                                                    <asp:Localize ID="localize17" runat="server" Text="Vehicle Registration Details" meta:resourcekey="localize103Resource1"></asp:Localize>
+                                                                </a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="http://www.gseb.org/">
+                                                                    <asp:Localize ID="localize18" runat="server" Text="Latest GSEB Exam Results" meta:resourcekey="localize104Resource1"></asp:Localize></a></li>
+                                                                <li><a href="https://eaadhaar.uidai.gov.in/">
+                                                                    <asp:Localize ID="localize19" runat="server" Text="Aadhar Card" meta:resourcekey="localize105Resource1"></asp:Localize></a></li>
+                                                                <li><a href="https://anyror.gujarat.gov.in/">
+                                                                    <asp:Localize ID="localize20" runat="server" Text="AnyRoR" meta:resourcekey="localize106Resource1"></asp:Localize>
+                                                                </a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="http://garvi.gujarat.gov.in">
+                                                                    <asp:Localize ID="localize22" runat="server" Text="gARVI-Registered Document <br/> & Jantri Rates" meta:resourcekey="localize104Resource1"></asp:Localize></a></li>
+                                                                <li><a href="">
+                                                                    <asp:Localize ID="localize23" runat="server" Text="Property Card" meta:resourcekey="localize105Resource1"></asp:Localize></a></li>
+                                                                <%-- <li><a href="https://anyror.gujarat.gov.in/">
+                                                                    <asp:Localize ID="localize32" runat="server" Text="AnyRoR" meta:resourcekey="localize106Resource1"></asp:Localize>
+                                                                </a></li>--%>
+                                                            </ul>
+                                                        </div>
+                                                        <%-- <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="#">
+                                                                    <asp:Localize ID="localize15" runat="server" Text="Website development Policy" meta:resourcekey="localize15Resource1"></asp:Localize></a></li>
+                                                                <li><a href="#">
+                                                                    <asp:Localize ID="localize16" runat="server" Text="Training Policy" meta:resourcekey="localize16Resource1"></asp:Localize></a></li>
+                                                                <li><a href="#">
+                                                                    <asp:Localize ID="localize17" runat="server" Text="Total Service Provider Policy" meta:resourcekey="localize17Resource1"></asp:Localize>
+                                                                </a></li>
+                                                                <li><a href="#">
+                                                                    <asp:Localize ID="localize18" runat="server" Text="Language Standardization Policy" meta:resourcekey="localize18Resource1"></asp:Localize></a></li>
+                                                                <li><a href="#">
+                                                                    <asp:Localize ID="localize19" runat="server" Text="IT Policy" meta:resourcekey="localize19Resource1"></asp:Localize></a></li>
+                                                            </ul>
+                                                        </div>--%>
+                                                        <%-- <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="#">
+                                                                    <asp:Localize ID="localize20" runat="server" Text="Legal" meta:resourcekey="localize20Resource1"></asp:Localize></a></li>
+                                                                <li><a href="#">
+                                                                    <asp:Localize ID="localize21" runat="server" Text="Digital Gujarat Registration" meta:resourcekey="localize21Resource1"></asp:Localize></a></li>
+                                                                <li><a href="#">
+                                                                    <asp:Localize ID="localize22" runat="server" Text="Citizen Alerts" meta:resourcekey="localize22Resource1"></asp:Localize></a></li>
+                                                                <li><a href="#">
+                                                                    <asp:Localize ID="localize23" runat="server" Text="Trending" meta:resourcekey="localize23Resource1"></asp:Localize></a></li>
+                                                            </ul>
+                                                        </div>--%>
+                                                        <%-- <div class="col-md-3 col-sm-3">
+                                                            <img src='<%=ResolveUrl("~/images/menu-img.jpg")%>' />
+                                                        </div>--%>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                        <li class="dropdown w3_megamenu-fw">
+                                            <a class="job" href="#" data-toggle="dropdown">
+                                                <asp:Localize ID="localize9" runat="server" meta:resourcekey="localize9Resource1" Text="Employment"></asp:Localize></a>
+                                            <ul class="dropdown-menu fullwidth" role="menu">
+                                                <li class="w3_megamenu-content">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="https://ojas.gujarat.gov.in/" target="_blank">
+                                                                    <asp:Localize ID="localize56" runat="server" Text="Government Jobs" meta:resourcekey="localize56Resource1"></asp:Localize></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="http://iic.gcvt.org/index.aspx#.VdwmmiWqqko" target="_blank">
+                                                                    <asp:Localize ID="localize61" runat="server" Text="Industry Interface Cell" meta:resourcekey="localize61Resource1"></asp:Localize>
+                                                                </a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="https://empower.gujarat.gov.in/" target="_blank">
+                                                                    <asp:Localize ID="localize64" runat="server" Text="eMpower " meta:resourcekey="localize64Resource1"></asp:Localize>
+                                                                </a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <%-- <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="http://ojas.guj.nic.in/" target="_blank">
+                                                                    <asp:Localize ID="localize5" runat="server" Text="OJAS" meta:resourcekey="localize5Resource1"></asp:Localize>
+                                                                </a></li>
+                                                            </ul>
+                                                        </div>--%>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown w3_megamenu-fw">
+                                            <a class="Revenue" href="#" data-toggle="dropdown">
+                                                <asp:Localize ID="localize10" runat="server" meta:resourcekey="localize10Resource1" Text="Revenue"></asp:Localize></a>
+                                            <ul class="dropdown-menu fullwidth" role="menu">
+                                                <li class="w3_megamenu-content">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <%-- <li><a href="#">
+                                                                    <asp:Localize ID="localize5" runat="server" Text="Gujarat Online Services" meta:resourcekey="localize5Resource1"></asp:Localize></a></li>--%>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=63")%>'>
+                                                                    <asp:Localize ID="localize80" runat="server" Text="Income certificate" meta:resourcekey="localize80Resource1"></asp:Localize>
+                                                                </a></li>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=64")%>'>
+                                                                    <asp:Localize ID="localize81" runat="server" meta:resourcekey="localize81Resource1" Text="Socially & Educationally Backward Class Certificate "></asp:Localize>
+                                                                </a></li>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=65")%>'>
+                                                                    <asp:Localize ID="localize82" runat="server" meta:resourcekey="localize82Resource1" Text="SC/ST Caste Certificate"></asp:Localize>
+                                                                </a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=82")%>'>
+                                                                    <asp:Localize ID="localize72" runat="server" Text="Non-Creamylayer Certificate " meta:resourcekey="localize72Resource1"></asp:Localize></a></li>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=362")%>'>
+                                                                    <asp:Localize ID="localize73" runat="server" Text="Non-Creamylayer Certificate For Central Goverment" meta:resourcekey="localize73Resource1"></asp:Localize></a></li>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=66")%>'>
+                                                                    <asp:Localize ID="localize74" runat="server" Text="Temporary Residence Certificate" meta:resourcekey="localize74Resource1"></asp:Localize>
+                                                                </a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=71")%>'>
+                                                                    <asp:Localize ID="localize77" runat="server" Text="Application for Varsai Certificate" meta:resourcekey="localize77Resource1"></asp:Localize></a></li>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=77")%>'>
+                                                                    <asp:Localize ID="localize78" runat="server" Text="Senior Citizen Certificate" meta:resourcekey="localize78Resource1"></asp:Localize></a></li>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=79")%>'>
+                                                                    <asp:Localize ID="localize79" runat="server" Text="Religious Minority Certificate" meta:resourcekey="localize79Resource1"></asp:Localize></a></li>
+                                                                <li><a href='<%=ResolveUrl("~/Citizen/CitizenService.aspx")%>'>
+                                                                    <asp:Localize ID="localize3" runat="server" Text="More" meta:resourcekey="localize89Resource1"></asp:Localize></a></li>
+
+
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown w3_megamenu-fw"><a class="panchyat" href="#" data-toggle="dropdown">
+                                            <asp:Localize ID="localize11" runat="server" meta:resourcekey="localize11Resource1" Text="Panchayat"></asp:Localize></a>
+                                            <ul class="dropdown-menu fullwidth" role="menu">
+                                                <li class="w3_megamenu-content">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=309")%>'>
+                                                                    <asp:Localize ID="localize83" runat="server" Text="Economically Backward Certificate" meta:resourcekey="localize83Resource1"></asp:Localize>
+                                                                </a></li>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=310")%>'>
+                                                                    <asp:Localize ID="localize84" runat="server" meta:resourcekey="localize84Resource1" Text="Widow Certificate "></asp:Localize>
+                                                                </a></li>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=307")%>'>
+                                                                    <asp:Localize ID="localize85" runat="server" meta:resourcekey="localize85Resource1" Text="Income certificate"></asp:Localize>
+                                                                </a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=311")%>'>
+                                                                    <asp:Localize ID="localize68" runat="server" Text="SC/ST Caste Certificate" meta:resourcekey="localize72Resource1"></asp:Localize></a></li>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=308")%>'>
+                                                                    <asp:Localize ID="localize69" runat="server" Text="Religious Minority Certificate" meta:resourcekey="localize73Resource1"></asp:Localize></a></li>
+                                                                <li><a href='<%=Convert.ToString("https://www.digitalgujarat.gov.in/Citizen/ServiceDescription.aspx?ServiceID=366")%>'>
+                                                                    <asp:Localize ID="localize70" runat="server" Text="Socially & Educationally Backward Class Certificate " meta:resourcekey="localize74Resource1"></asp:Localize>
+                                                                </a></li>
+                                                                <li><a href='<%=ResolveUrl("~/Citizen/CitizenService.aspx")%>'>
+                                                                    <asp:Localize ID="localize4" runat="server" Text="More"></asp:Localize></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                        
+
+                                            <li class="dropdown w3_megamenu-fw">
+                                                <a class="ScholarShip" href="#" data-toggle="dropdown">
+                                                    <asp:Localize ID="localize33" runat="server"  Text="Student Corner"></asp:Localize></a>
+                                                <%-- <a class="ScholarShip" id="ScholarShip" href='<%=ResolveUrl("~/Citizen/CitizenService.aspx?id=0")%>'>--%>
+                                                <%-- <asp:Localize ID="localize32" runat="server" Text="Scholarship"></asp:Localize></a>--%>
+                                                <ul class="dropdown-menu fullwidth" role="menu">
+                                                    <li class="w3_megamenu-content">
+                                                        <div class="row">
+                                                            <div class="col-md-3 col-sm-3">
+                                                                <ul class="innerMenu">
+                                                                    <li><a href='<%=ResolveUrl("~/Citizen/CitizenService.aspx?id=0")%>'>
+                                                                        <asp:Localize ID="localize32" runat="server" Text="Scholarship" ></asp:Localize></a>
+
+
+
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        
+                                                            <div class="col-md-3 col-sm-3">
+                                                                <ul class="innerMenu">
+                                                                   <li><a href='<%=ResolveUrl("~/Tablet.aspx")%>'>
+                                                                        <asp:Localize ID="localize35" runat="server" Text="Student Tablet" ></asp:Localize></a>
+
+
+
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                             <div class="col-md-3 col-sm-3">
+                                                                <ul class="innerMenu">
+                                                                   <li><a href='<%=ResolveUrl("~/Citizen/ServiceDescription.aspx?ServiceID=605")%>'>
+                                                                        <asp:Localize ID="localize36" runat="server" Text="Hostel" ></asp:Localize></a>
+
+
+
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+
+                                            </li>
+
+                                        <li class="dropdown w3_megamenu-fw"><a class="torisum" href="#" data-toggle="dropdown">
+                                            <asp:Localize ID="localize13" runat="server" meta:resourcekey="localize13Resource1" Text="Tourism"></asp:Localize></a>
+                                            <ul class="dropdown-menu fullwidth" role="menu">
+                                                <li class="w3_megamenu-content">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="http://www.gujarattourism.com" target="_blank">
+                                                                    <asp:Localize ID="localize52" runat="server" Text="Gujarat Tourism" meta:resourcekey="localize52Resource1"></asp:Localize></a></li>
+                                                                <li><a href="http://www.gujarattourism.com/hubs/" target="_blank">
+                                                                    <asp:Localize ID="localize53" runat="server" Text="Places to visit " meta:resourcekey="localize53Resource1"></asp:Localize>
+                                                                </a></li>
+
+
+                                                                <%--<li><a href="#"><asp:Localize ID="localize61" runat="server" Text="Financial" meta:resourcekey="localize7Resource1"></asp:Localize> </a></li>--%>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="http://www.cottage.gujarat.gov.in/eng/?page_id=487" target="_blank">
+                                                                    <asp:Localize ID="localize54" runat="server" Text="Key Attractions" meta:resourcekey="localize54Resource1"></asp:Localize>
+                                                                </a></li>
+                                                                <li><a href="https://girlion.gujarat.gov.in" target="_blank">
+                                                                    <asp:Localize ID="localize62" runat="server" Text="GIR - Online Permit Booking" meta:resourcekey="localize62Resource1"></asp:Localize>
+                                                                </a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3 col-sm-3">
+                                                            <ul class="innerMenu">
+                                                                <li><a href="http://www.somnath.org/" target="_blank">
+                                                                    <asp:Localize ID="localize63" runat="server" Text="Somnath" meta:resourcekey="localize63Resource1"></asp:Localize>
+                                                                </a></li>
+                                                                <li><a href="http://booking.gujarattourism.com/" target="_blank">
+                                                                    <asp:Localize ID="localize55" runat="server" Text="State Tourism Online Booking" meta:resourcekey="localize55Resource1"></asp:Localize>
+                                                                </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="contact " href='<%=ResolveUrl("~/Citizen/ContactUs.aspx")%>'>
+                                            <asp:Localize ID="localize14" runat="server" meta:resourcekey="localize14Resource1" Text="Contact"></asp:Localize></a></li>
+                                          <%-- <li><a class="registration " href="https://www.digitalgujarat.gov.in/CitizenApp/Citizen/CitizenWEBUI/Registration.aspx">
+                                            <asp:Localize ID="localize1" runat="server" meta:resourcekey="localize16Registration" Text="Registration"></asp:Localize></a></li>--%>
+                                         <li><a href='<%=ResolveUrl("~/Citizen/Covid-19.aspx")%>'>
+                                            <asp:Localize ID="localize21" runat="server" meta:resourcekey="localize16Registration" Text="Covid-19"></asp:Localize></a></li>
+                                    </ul>
+
+                                </div>
+                                <!-- /.navbar-collapse -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+          <%--  <cc1:ModalPopupExtender ID="ModalPopupselectCity" runat="server" TargetControlID="lnkchangecity"
+                PopupControlID="Panel2" BackgroundCssClass="modalBackground" />--%>
+            <%-- BehaviorID="ModalPopupselectCity" />--%>
+            <asp:Panel ID="Panel2" runat="server" Style="display: none; background-color: White; border-width: 2px; border-color: Black; width: 55%; border-style: solid; top: 10px !important;" meta:resourcekey="Panel2Resource1">
+                <div class="panel panel-default" style="top: 10px !important;">
+                    <div class="panel-heading clearfix">
+                        <div class="form-group">
+                            <div class="col-xs-3">
+                                <h3 class="panel-title">
+                                    <asp:Label ID="Label1" CssClass="control-label  " runat="server"
+                                        Text="Select City"></asp:Label></h3>
+                            </div>
+                            <div class="col-xs-4">
+                                <asp:TextBox ID="txtSearchCity" placeholder="Search City like Gandhinagar" Width="215px" runat="server" CssClass="form-control "></asp:TextBox>
+                                <cc1:AutoCompleteExtender ID="AutoCitySearch" runat="server" TargetControlID="txtSearchCity"
+                                    ServiceMethod="GetSearchCityList"
+                                    MinimumPrefixLength="2"
+                                    CompletionInterval="1"
+                                    EnableCaching="true"
+                                    CompletionSetCount="20"
+                                    CompletionListCssClass="autocomplete_completionListElement"
+                                    CompletionListItemCssClass="autocomplete_listItem"
+                                    CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem"
+                                    DelimiterCharacters=";, :">
+                                </cc1:AutoCompleteExtender>
+                            </div>
+                            <div class="col-xs-1">
+                                <asp:Button ID="btnSearchGo" CssClass="btn btn-default reg" runat="server" Text="Go" />
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="panel-body">
+                        <asp:Panel ID="Panel3" runat="server" ScrollBars="Auto" meta:resourcekey="Panel3Resource1">
+                            <div class="panel-body table-responsive myAcctab" style="height: 330px;" id="divids" runat="server">
+                                <asp:DataList ID="dlCity" runat="server" CssClass="table table-striped" RepeatColumns="6" RepeatDirection="Horizontal">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnk" runat="server" ForeColor="Black" OnClick="lnk_Click" Text='<%# Eval(IIf(Session("MyCulture") = "en-GB", "CityName", "CityNameG"))%>'></asp:LinkButton>
+                                        <asp:HiddenField ID="dlOfficeID" Value='<%# Eval("OfficeID")%>' runat="server" />
+                                    </ItemTemplate>
+                                    <ItemStyle CssClass="MapItem" />
+                                </asp:DataList>
+
+                            </div>
+                        </asp:Panel>
+                    </div>
+
+                </div>
+
+
+            </asp:Panel>
+
+
+            <footer id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <h2>
+                                        <asp:Localize ID="localize45" runat="server" Text="About Gujarat" meta:resourcekey="localize45Resource1"></asp:Localize></h2>
+                                    <ul>
+                                        <li><a href="http://gujaratindia.com/about-gujarat/gujarat-at-glance.htm" target="_blank">
+                                            <asp:Localize ID="localize24" runat="server" Text="Gujarat at a Glance " meta:resourcekey="localize24Resource1"></asp:Localize></a></li>
+                                        <li><a href="http://gujaratindia.com/about-gujarat/history-1.htm" target="_blank">
+                                            <asp:Localize ID="localize25" runat="server" Text="Gujarat History " meta:resourcekey="localize25Resource1"></asp:Localize></a></li>
+                                        <li><a href="http://gujaratindia.com/about-gujarat/fact-file.htm" target="_blank">
+                                            <asp:Localize ID="localize5" runat="server" Text="Gujarat Fact File" meta:resourcekey="localize5Resource1"></asp:Localize></a></li>
+                                        <li><a href="http://gujaratindia.com/about-gujarat/getting-guj.htm" target="_blank">
+                                            <asp:Localize ID="localize26" runat="server" Text="Getting to Gujarat " meta:resourcekey="localize26Resource1"></asp:Localize></a></li>
+                                        <li>
+                                            <asp:LinkButton  ID="lnkchangecity" runat="server" Text="Office Detail " meta:resourcekey="localizeofficedetail1"></asp:LinkButton></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <h2>
+                                        <asp:Localize ID="localize46" runat="server" Text="Services Sector" meta:resourcekey="localize46Resource1"></asp:Localize></h2>
+                                    <ul>
+                                        <li><a href='<%=ResolveUrl("~/Citizen/CitizenService.aspx")%>' target="_blank">
+                                            <asp:Localize ID="localize27" runat="server" Text="Citizen Services" meta:resourcekey="localize27Resource1"></asp:Localize></a></li>
+                                        <li><a href="http://www.ifpgujarat.gov.in/portal/index.jsp" target="_blank">
+                                            <asp:Localize ID="localize28" runat="server" Text="Business Services" meta:resourcekey="localize28Resource1"></asp:Localize></a></li>
+                                        <li><a href="http://financedepartment.gujarat.gov.in/" target="_blank">
+                                            <asp:Localize ID="localize29" runat="server" Text="Financial Services" meta:resourcekey="localize29Resource1"></asp:Localize></a></li>
+
+                                    </ul>
+
+                                
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <h2>
+                                        <asp:Localize ID="localize47" runat="server" Text="State" meta:resourcekey="localize47Resource1"></asp:Localize></h2>
+                                    <ul>
+                                        <li><a href="http://lpd.gujarat.gov.in/htm/acts.htm" target="_blank">
+                                            <asp:Localize ID="localize30" runat="server" Text="Acts & Rules " meta:resourcekey="localize30Resource1"></asp:Localize></a></li>
+                                        <li><a href="http://financedepartment.gujarat.gov.in/Budget.html" target="_blank">
+                                            <asp:Localize ID="localize31" runat="server" Text="Budget" meta:resourcekey="localize31Resource1"></asp:Localize></a></li>
+                                        <%--   <li><a href="#">
+                                            <asp:Localize ID="localize32" runat="server" Text="Acts &amp; Rules" meta:resourcekey="localize32Resource1"></asp:Localize></a></li>--%>
+                                    </ul>
+                                </div>
+                                <%--<div class="col-md-2 col-sm-2">
+                                    <h2>
+                                        <asp:Localize ID="localize47" runat="server" Text="Policy" meta:resourcekey="localize47Resource1"></asp:Localize></h2>
+                                    <ul>
+                                        <li><a href="#">
+                                            <asp:Localize ID="localize30" runat="server" Text="Circular &amp; Notices" meta:resourcekey="localize30Resource1"></asp:Localize></a></li>
+                                        <li><a href="#">
+                                            <asp:Localize ID="localize31" runat="server" Text="Government Resolutions" meta:resourcekey="localize31Resource1"></asp:Localize></a></li>
+                                        <li><a href="#">
+                                            <asp:Localize ID="localize32" runat="server" Text="Acts &amp; Rules" meta:resourcekey="localize32Resource1"></asp:Localize></a></li>
+
+                                    </ul>
+                                </div>--%>
+                                <%--<div class="col-md-2 col-sm-2">
+                                    <h2>
+                                        <asp:Localize ID="localize48" runat="server" Text="Offices" meta:resourcekey="localize48Resource1"></asp:Localize></h2>
+                                    <ul>
+                                        <li><a href="#">
+                                            <asp:Localize ID="localize33" runat="server" Text="Mamlatdar Office" meta:resourcekey="localize33Resource1"></asp:Localize></a></li>
+                                        <li><a href="#">
+                                            <asp:Localize ID="localize34" runat="server" Text="Prant Office" meta:resourcekey="localize34Resource1"></asp:Localize></a></li>
+                                        <li><a href="#">
+                                            <asp:Localize ID="localize35" runat="server" Text="Jan Seva Kendra" meta:resourcekey="localize35Resource1"></asp:Localize></a></li>
+
+                                    </ul>
+                                </div>--%>
+                                <%-- <div class="col-md-2 col-sm-2">
+                                    <h2>
+                                        <asp:Localize ID="localize49" runat="server" Text="Help" meta:resourcekey="localize49Resource1"></asp:Localize></h2>
+                                    <ul>
+                                        <li><a href="#">
+                                            <asp:Localize ID="localize36" runat="server" Text="RTI" meta:resourcekey="localize36Resource1"></asp:Localize></a></li>
+                                        <li><a href="#">
+                                            <asp:Localize ID="localize37" runat="server" Text="Citizen's Charter" meta:resourcekey="localize37Resource1"></asp:Localize></a></li>
+                                        <li><a href="#">
+                                            <asp:Localize ID="localize38" runat="server" Text="Sitemap" meta:resourcekey="localize38Resource1"></asp:Localize></a></li>
+                                    </ul>
+                                </div>--%>
+                                <div class="col-md-6 col-sm-6">
+                                    <%--  <div class ="row">
+                                          <img src='<%=ResolveUrl("~/Images/NIC1.png")%>' width="100px" title="Digital Gujarat">
+                                             <img src='<%=ResolveUrl("~/Images/NIClogo.png")%>'  title="Digital Gujarat">
+                                             <p style="color:white">Digital Gujarat platform is designed, developed and hosted by National Informatics Centre, Department of Electronics & Information Technology, Ministry of Communications and IT, Government of India.</p>
+                                       
+                                    </div>--%>
+                                    <div class="footer-right">
+                                        <span class="footer-qr">
+                                            <a href="http://www.digitalgujarat.gov.in" target="_blank">
+                                                <img alt="Open Government Data Platform India" src='<%=ResolveUrl("~/images/DegitalQRcode.jpg")%>' width="100px" height="100px" />
+                                            </a>
+                                        </span>
+                                        <div class="logo-msz-cntr">
+                                            <div class="logo-msz-cntr">
+                                                <a href="http://www.dst.gujarat.gov.in" target="_blank">
+                                                    <img alt="DST" src='<%=ResolveUrl("~/images/DSTlogo.png")%>' width="330" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="footer-poweredby">
+
+                                            <a class="digitalindia ext" target="_blank" href="http://www.digitalindia.gov.in" title="Digital India (External Site that opens in a new window)"></a>
+                                            <a class="nicfooterlogo ext" href="http://guj.nic.in" target="_blank" title="My Gov (External Site that opens in a new window)"></a>
+                                            <a class="artd ext" target="_blank" href="http://artd.gujarat.gov.in" title="Open Gov Platform (External Site that opens in a new window)"></a>
+                                            <%--<a class="opengov ext" target="_blank" href="http://ogpl.gov.in" title="Open Gov Platform (External Site that opens in a new window)"></a>--%>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="secondFooter">
+                            <a href='<%=ResolveUrl("~/FooterPages/TermsofUse.aspx")%>'>
+
+                                <asp:Localize ID="localize40" runat="server" Text="Terms of Use" meta:resourcekey="localize40Resource1"></asp:Localize></a>
+                            <a href='<%=ResolveUrl("~/FooterPages/PrivacyPolicy.aspx")%>'>
+                                <asp:Localize ID="localize41" runat="server" Text="Privacy Policy" meta:resourcekey="localize41Resource1"></asp:Localize></a>
+                            <a href='<%=ResolveUrl("~/FooterPages/CopyRightPolicy.aspx")%>'>
+                                <asp:Localize ID="localize42" runat="server" Text="Copyright Policy" meta:resourcekey="localize42Resource1"></asp:Localize></a>
+                            <a href='<%=ResolveUrl("~/FooterPages/HyperlinkPolicy.aspx")%>'>
+                                <asp:Localize ID="localize43" runat="server" Text="Hyperlinking Policy" meta:resourcekey="localize43Resource1"></asp:Localize></a>
+
+
+                            
+                            <%-- <a href="#">
+                                <asp:Localize ID="localize44" runat="server" Text="Accessibility Statement" meta:resourcekey="localize44Resource1"></asp:Localize></a>--%>
+                        </div>
+                    </div>
+
+                        <div class="row">
+                          <div class="secondFooter">
+
+                    
+                          <a href='<% %>'>
+                                        <asp:Localize ID="localize12" runat="server" Text="Site Visited:" meta:resourcekey="sitevisitedResource1" ></asp:Localize>
+                                    <asp:Label ID="lblCount" runat="server" Text="" Font-Bold ="true" ></asp:Label>
+                          </a>
+                         <a href='<% %>'>
+                                       
+                                   <asp:Label ID="lblLastUpdated" runat="server" Text=""  ></asp:Label>
+                          </a>
+
+
+                         <a href='<% %>'>
+                           <asp:Localize ID="localize34" runat="server" Text="Site Version:"  meta:resourcekey="siteversionResource1"  ></asp:Localize>
+                               <asp:Label ID="lblVersion" runat="server" Text=""  ></asp:Label>
+                         </a>
+
+                               <a href="SiteMap.aspx" target="_blank">
+                                       
+                                   <asp:Label ID="lblsitemap" runat="server" Text="Sitemap" meta:resourcekey="sitemapResource1" ></asp:Label>
+                          </a>
+                                  </div>
+                         </div>
+                    <%-- <div class="row">
+                        <div class="copy text-center">
+                            <asp:Localize ID="localize51" runat="server" Text="Courtesy :: NIC-GJSC" meta:resourcekey="localize51Resource1"></asp:Localize>
+                           કૉપિરાઇટ © 2015 ગુજરાત રાજ્ય  બધા હક અનામત.
+                        </div>
+                    </div>--%>
+                </div>
+            </footer>
+        </div>
+
+
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <%--  <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">--%>
+
+
+
+
+        <a href="abc" id="a2" runat="server"></a>
+        <%--</asp:Content>--%>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Schem.master.vb" Inherits="DesignApp.Schem" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Required favicon tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="~/frmmain1/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="~/frmmain1/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="~/frmmain1/images/favicon-16x16.png" />
+    <link rel="manifest" href="~/frmmain1/images/site.webmanifest" />
+
+    <!-- Icon Fonts -->
+    <link rel="stylesheet" type="text/css" href="~/frmMain1/fonts/fontawesome-5-13-1/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/frmMain1/fonts/flaticon/flaticon.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="~/frmMain1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/frmMain1/css/owl.css" />
+    <link rel="stylesheet" type="text/css" href="~/frmMain1/css/style.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <title>Digital Gujarat</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <section class="header-section bg-delta">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="dg-logo">
+                            <a href='<%=ResolveUrl("~/frmMain1.aspx")%>'>
+
+                                <img src='<%=ResolveUrl("~/frmMain1/images/logo.png")%>' alt="Digital Gujarat" class="img-fluid" />
+                            </a>
+                        </div>
+                        <!-- dg-logo ends -->
+                    </div>
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <img class="emblem-of-india" src='<%=ResolveUrl("~/frmMain1/images/android-chrome-192x192.png")%>' alt="emblem" />
+                        <h1 class="text-center text-2xl text-capitalize weight-700 m-0 text-alpha"><asp:Localize ID="localize1Resource41"   runat="server" meta:resourcekey="localize1Resource41" Text="Government of Gujarat"></asp:Localize></h1>
+                    </div>
+                    <!-- col ends -->
+                    <div class="col-lg-3 col-md-12">
+                        <div class="dg-top-nav">
+                            <ul>
+                                  <li> <asp:LinkButton ID="btnLangEnglish" runat="server" meta:resourcekey="enResource1" Text="English"></asp:LinkButton></li> 
+                              <li>  <asp:LinkButton ID="btnLangGujarati" runat="server" meta:resourcekey="guResource1" Text="ગુજરાતી"></asp:LinkButton></li>
+
+                                <li><a href="#" id="btn-decrease">A-</a></li>
+                                <li><a href="#" id="btn-orig">A</a></li>
+                                <li><a href="#" id="btn-increase">A+</a></li>
+                            </ul>
+                            <ul class="mt-1">
+                                <li>
+                                    <a href="https://www.digitalgujarat.gov.in/CitizenApp/Citizen/CitizenWEBUI/Registration.aspx" class="text-blue">
+                                        <i class="fas fa-handshake"></i>
+                                        <span><asp:Localize ID="localize1Resource31"   runat="server" meta:resourcekey="localize1Resource31" Text="Register"></asp:Localize></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.digitalgujarat.gov.in/loginapp/CitizenLogin.aspx" class="text-beta">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        <span><asp:Localize ID="localize1Resource32"   runat="server" meta:resourcekey="localize1Resource32" Text="Login"></asp:Localize></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- dg-top-nav ends -->
+                    </div>
+                    <!-- col ends -->
+                </div>
+                <!-- row ends -->
+            </div>
+            <!-- container ends -->
+        </section>
+        <section class="bg-delta dg-menu-bar">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-12 dg-navbar">
+                        <!-- Mega Menu Starts -->
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand weight-600 d-lg-none">Menu</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnavbar" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+                                <!-- <span class="navbar-toggler-icon"></span> -->
+                                <i class="fas fa-bars text-alpha"></i>
+                            </button>
+                            <div class="collapse navbar-collapse" id="mainnavbar">
+                                <ul class="navbar-nav">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href='<%=ResolveUrl("~/frmMain1.aspx")%>'>
+                                            <i class="flaticon-home"></i>
+                                            <span><asp:Localize ID="localize1Resource33"   runat="server" meta:resourcekey="localize1Resource33" Text="home"></asp:Localize></span>
+                                        </a>
+                                    </li>
+                                    <!-- nav-item ends -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://gujaratindia.gov.in/about-gujarat/gujarat-at-glance.htm" target="_blank">
+                                            <i class="flaticon-capitol-building"></i>
+                                            <span><asp:Localize ID="localize1Resource34"   runat="server" meta:resourcekey="localize1Resource34" Text="about gujarat"></asp:Localize></span>
+                                        </a>
+                                    </li>
+                                    <!-- nav-item ends -->
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://gujaratindia.gov.in/" target="_blank">
+                                            <i class="flaticon-solidarity"></i>
+                                           <span><asp:Localize ID="localize1Resource35"   runat="server" meta:resourcekey="localize1Resource35" Text="Government"></asp:Localize></span>
+                                        </a>
+                                    </li>
+                                    <!-- nav-item ends -->
+                                     <li class="nav-item dropdown">
+                                        
+                                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              <i class="flaticon-customer"></i><asp:Label id="lblservice"   meta:resourcekey="localize1Resource55" runat ="server" Text ="Services">
+                                                                               </asp:Label>                                        
+                                            </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href='<%=ResolveUrl("~/Citizen/CitizenService.aspx")%>'><asp:Label id="Label1" meta:resourcekey="localize1Resource56" runat ="server" Text ="Citizen Services"></asp:Label></a>
+                                            <a class="dropdown-item" href='<%=ResolveUrl("~/SchemPortal/ServiceGroup.aspx")%>'><asp:Label id="Label2" meta:resourcekey="localize1Resource57" runat ="server" Text ="Advance Search"></asp:Label></a>
+                                            <a class="dropdown-item" href='<%=ResolveUrl("~/Citizen/CitizenService.aspx?id=0")%>'><asp:Label id="Label3" meta:resourcekey="localize1Resource58" runat ="server" Text ="Student Corner"></asp:Label></a>
+                                        </div>
+                                    </li>
+
+                                   <%-- <li class="nav-item">
+                                        <a class="nav-link" href='<%=ResolveUrl("~/SchemPortal/ServiceGroup.aspx")%>'>
+                                            <i class="flaticon-customer"></i>
+                                            <span><asp:Localize ID="localize1Resource36"   runat="server" meta:resourcekey="localize1Resource36" Text="Services"></asp:Localize></span>
+                                        </a>
+                                    </li>--%>
+                                    <!-- nav-item ends -->
+
+                                    <li class="nav-item d-none">
+                                        <a class="nav-link" href="#">
+                                            <i class="flaticon-target"></i>
+                                            <span>mission</span>
+                                        </a>
+                                    </li>
+                                    <!-- nav-item ends -->
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href='<%=ResolveUrl("~/SchemPortal/Policies.aspx")%>'>
+                                            <i class="flaticon-teamwork"></i>
+                                            <span><asp:Localize ID="localize1Resource37"   runat="server" meta:resourcekey="localize1Resource37" Text="Policy"></asp:Localize></span>
+                                        </a>
+                                    </li>
+                                    <!-- nav-item ends -->
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://gujaratindia.gov.in/business/investment-destination.htm" target="_blank">
+                                            <i class="flaticon-business-and-finance"></i>
+                                            <span><asp:Localize ID="localize1Resource38"   runat="server" meta:resourcekey="localize1Resource38" Text="business"></asp:Localize></span>
+                                        </a>
+                                    </li>
+                                    <!-- nav-item ends -->
+
+                                    <li class="nav-item d-none">
+                                        <a class="nav-link" href="#">
+                                            <i class="flaticon-care"></i>
+                                            <span>major initiatives</span>
+                                        </a>
+                                    </li>
+                                    <!-- nav-item ends -->
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://www.gujarattourism.com/" target="_blank">
+                                            <i class="flaticon-beach"></i>
+                                            <span><asp:Localize ID="localize1Resource39"   runat="server" meta:resourcekey="localize1Resource39" Text="tourism"></asp:Localize></span>
+                                        </a>
+                                    </li>
+                                    <!-- nav-item ends -->
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href='<%=ResolveUrl("~/SchemPortal/ContactUs.aspx")%>'>
+                                            <i class="flaticon-phone-call"></i>
+                                            <span><asp:Localize ID="localize1Resource40"   runat="server" meta:resourcekey="localize1Resource40" Text="contact us"></asp:Localize></span>
+                                        </a>
+                                    </li>
+                                    <!-- nav-item ends -->
+
+                                </ul>
+                                <!-- navbar-nav ends -->
+                            </div>
+                            <!-- collapse navbar-collapse ends -->
+                        </nav>
+                        <!-- Mega Menu Ends -->
+                    </div>
+                    <!-- col ends -->
+                </div>
+                <!-- row ends -->
+            </div>
+            <!-- container ends -->
+        </section>
+
+        <%-- Contant Palce holder Start  --%>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+        <%-- Contant Palce holder End  --%>
+
+
+        <section class="footer-section bg-gamma">
+            <footer>
+                <div class="container">
+
+                    <div class="row mb-5">
+                        <div class="col-md-12 col-lg-2">
+                            <div class="dg-emblem">
+                                <img src='<%=ResolveUrl("~/frmMain1/images/emblem-of-india-beta.png")%>' alt="Digital Gujarat">
+                            </div>
+                            <!-- dg-emblem ends -->
+                        </div>
+                        <!-- col ends -->
+                        <div class="col-md-12 col-lg-10">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dg-foot-menu">
+                                        <ul>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource42"   runat="server" meta:resourcekey="localize1Resource42" Text="About The Portal"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource43"   runat="server" meta:resourcekey="localize1Resource43" Text="grievance redressal"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource44"   runat="server" meta:resourcekey="localize1Resource44" Text="feedback"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource45"   runat="server" meta:resourcekey="localize1Resource45" Text="FAQs"></asp:Localize></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- col ends -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dg-foot-menu">
+                                        <ul>
+
+                                            <li><a href="#"><asp:Localize ID="localize1Resource46"   runat="server" meta:resourcekey="localize1Resource46" Text="terms of use"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource47"   runat="server" meta:resourcekey="localize1Resource47" Text="disclaimer"></asp:Localize></a></li>
+                                            <li><a href='<%=ResolveUrl("~/SchemPortal/CopyrightPolicy.aspx")%>'><asp:Localize ID="localize1Resource48"   runat="server" meta:resourcekey="localize1Resource48" Text="copyright"></asp:Localize></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- col ends -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dg-foot-menu">
+                                        <ul>
+                                            <li><a href='<%=ResolveUrl("~/SchemPortal/SiteMap.aspx")%>'><asp:Localize ID="localize1Resource49"   runat="server" meta:resourcekey="localize1Resource49" Text="site map"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource50"   runat="server" meta:resourcekey="localize1Resource50" Text="downloads"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource51"   runat="server" meta:resourcekey="localize1Resource51" Text="accessibility statement"></asp:Localize></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- col ends -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dg-foot-menu">
+                                        <ul>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource52"   runat="server" meta:resourcekey="localize1Resource52" Text="link to us"></asp:Localize></a></li>
+                                            <li><a href='<%=ResolveUrl("~/SchemPortal/ContactUs.aspx")%>'><asp:Localize ID="localize1Resource53"   runat="server" meta:resourcekey="localize1Resource53" Text="help"></asp:Localize></a></li>
+                                            <li><a href='<%=ResolveUrl("~/SchemPortal/ContactUs.aspx")%>'><asp:Localize ID="localize1Resource54"   runat="server" meta:resourcekey="localize1Resource54" Text="contact us"></asp:Localize></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- col ends -->
+                            </div>
+                            <!-- row ends -->
+                        </div>
+                        <!-- col ends -->
+                    </div>
+                    <!-- row ends -->
+
+                    <div class="row no-gutters mb-5">
+                        <div class="col-12">
+                            <div class="dg-footer-logos">
+                                <div class="dg-f-l-item">
+                                    <a href="#">
+                                        <img src='<%=ResolveUrl("~/frmMain1/images/logos/digital-india.png")%>' alt="Digital Gujarat"></a>
+                                </div>
+                                <div class="dg-f-l-item">
+                                    <a href="#">
+                                        <img src='<%=ResolveUrl("~/frmMain1/images/logos/swachchha-bharat.png")%>' alt="swachchha-bharat"></a>
+                                </div>
+                                <div class="dg-f-l-item">
+                                    <a href="#">
+                                        <img src='<%=ResolveUrl("~/frmMain1/images/logos/gandhiji-150.png")%>' alt="gandhiji-150"></a>
+                                </div>
+                                <div class="dg-f-l-item">
+                                    <a href="#">
+                                        <img src='<%=ResolveUrl("~/frmMain1/images/logos/mygov.png")%>' alt="mygov"></a>
+                                </div>
+                                <div class="dg-f-l-item">
+                                    <a href="#">
+                                        <img src='<%=ResolveUrl("~/frmMain1/images/logos/nic.png")%>' alt="nic"></a>
+                                </div>
+                            </div>
+                            <!-- dg-footer-logos ends -->
+                        </div>
+                        <!-- col ends -->
+                    </div>
+                    <!-- row ends -->
+
+                    <div class="row no-gutters mb-4">
+                        <div class="col-12">
+                             <div class="dg-footer-stats dg-browser-info text-center">
+                                
+                                <asp:Localize ID="localize12" runat="server" Text="Site Visited:" meta:resourcekey="sitevisitedResource1" ></asp:Localize>
+                                <asp:Label ID="lblCount" runat="server" Text="" Font-Bold="true"  ForeColor="#8b99a7"  ></asp:Label>
+                           
+                                 &nbsp;&nbsp;&nbsp;
+
+                                <asp:Label ID="lblLastUpdated" runat="server" Text=""  ForeColor="#8b99a7"></asp:Label>
+                            
+
+                                 &nbsp;&nbsp;&nbsp;
+                            
+                                <asp:Localize ID="localize34" runat="server" Text="Site Version:" meta:resourcekey="siteversionResource1"  ></asp:Localize>
+                                <asp:Label ID="lblVersion" runat="server" Text=""  ForeColor="#8b99a7" ></asp:Label>
+                        
+                                 &nbsp;&nbsp;&nbsp;
+                            <a href='<%=ResolveUrl("~/SchemPortal/SiteMap.aspx")%>' style=" font-size: 13px;  color: #8b99a7;" >
+
+                                <asp:Label ID="lblsitemap" runat="server" Text="Sitemap" meta:resourcekey="sitemapResource1"></asp:Label>
+                            </a>
+                            </div>
+                            <!-- dg-footer-stats ends -->
+                        </div>
+                        <!-- col ends -->
+                    </div>
+                    <!-- row ends -->
+
+                    <div class="row no-gutters">
+                        <div class="col-lg-8">
+                            <div class="dg-browser-info">
+                                Website is best viewed with 1280 X 800 resolution in Firefox 64.0 / Chrome 72.0 or above.
+                            </div>
+                            <!-- dg-browser-info ends -->
+                        </div>
+                        <!-- col ends -->
+                        <div class="col-lg-4">
+                            <div class="dg-copyright">
+                                <i class="far fa-copyright"></i>Digital Gujarat 2020. All Rights Reserved.
+                            </div>
+                            <!-- dg-copyright ends -->
+                        </div>
+                        <!-- col ends -->
+                    </div>
+                    <!-- row ends -->
+
+                </div>
+                <!-- container ends -->
+            </footer>
+        </section>
+        <button class="scroll-top scroll-to-target open" data-target="html">
+            <span class=""><i class="fas fa-arrow-up"></i></span>
+        </button>
+    </form>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/jquery.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/popper.min.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/bootstrap.min.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/fonts/fontawesome-5-13-1/all.min.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/owl.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/mega-menu.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/main.js")%>'></script>
+</body>
+</html>

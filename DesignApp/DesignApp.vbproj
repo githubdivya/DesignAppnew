@@ -1,0 +1,1103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{98FE9E69-E18E-4CE3-89E8-E3E403CB058B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DesignApp</RootNamespace>
+    <AssemblyName>DesignApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>DesignApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PublishDatabases>true</PublishDatabases>
+    <IncludeIisSettings>true</IncludeIisSettings>
+    <IncludeAppPool>false</IncludeAppPool>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>DesignApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.11119.20010, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\SqlInjectionScreeningModuleVB.vb" />
+    <Content Include="bin\DesignApp.dll" />
+    <Content Include="bin\DesignApp.pdb" />
+    <Content Include="bootstrap\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrap\js\npm.js" />
+    <Content Include="Citizen\CitizenService.aspx" />
+    <Content Include="Citizen\ContactUs.aspx" />
+    <Content Include="Citizen\frmcertificates.aspx" />
+    <Content Include="Citizen\frmIncomeCertificateInfo.aspx" />
+    <Content Include="Citizen\frmServiceGroup.aspx" />
+    <Content Include="Citizen\MoreApps.aspx" />
+    <Content Include="Citizen\MoreDepartment.aspx" />
+    <Content Include="Citizen\ServiceDescription.aspx" />
+    <Content Include="CSS\animate.css" />
+    <Content Include="CSS\bootstrap-theme.min.css" />
+    <Content Include="CSS\bootstrap.css" />
+    <Content Include="CSS\bootstrap.min.css" />
+    <Content Include="CSS\datepicker_ByDesigner.css" />
+    <Content Include="CSS\font-awesome.css" />
+    <Content Include="CSS\font-awesome.min.css" />
+    <Content Include="CSS\fontfamily-Arimo.css" />
+    <Content Include="CSS\fontfamily-OpenSans.css" />
+    <Content Include="CSS\fontfamily-Tinos.css" />
+    <Content Include="CSS\fontfamily-Yanone_Kaffeesatz.css" />
+    <Content Include="CSS\responsive.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\style_ByDesigner.css" />
+    <Content Include="CSS\Theme.css" />
+    <Content Include="CSS\yamm.css" />
+    <Content Include="DepartmentWiseServiceCount.aspx" />
+    <Content Include="DisplayOffice.aspx" />
+    <Content Include="fonts\Poppins-bold.svg" />
+    <Content Include="fonts\Poppins-Light.svg" />
+    <Content Include="fonts\Poppins-Medium.svg" />
+    <Content Include="fonts\Poppins-Regular.svg" />
+    <Content Include="fonts\Poppins-SemiBold.svg" />
+    <Content Include="frmEGram.aspx" />
+    <Content Include="frmEGram.Master" />
+    <Content Include="FrmGrampanchayatCount.aspx" />
+    <Content Include="frmMain.aspx" />
+    <Content Include="DLL\AjaxControlToolkit.dll" />
+    <Content Include="Download\Frmdownload.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="FooterPages\CopyRightPolicy.aspx" />
+    <Content Include="FooterPages\HyperlinkPolicy.aspx" />
+    <Content Include="FooterPages\PrivacyPolicy.aspx" />
+    <Content Include="FooterPages\TermsofUse.aspx" />
+    <Content Include="frmMain1.aspx" />
+    <Content Include="frmMain1\css\app-icons.css" />
+    <Content Include="frmMain1\css\bootstrap.min.css" />
+    <Content Include="frmMain1\css\owl.carousel.min.css" />
+    <Content Include="frmMain1\css\owl.css" />
+    <Content Include="frmMain1\css\print.css" />
+    <Content Include="frmMain1\css\style-blue.css" />
+    <Content Include="frmMain1\css\style-darkBlue.css" />
+    <Content Include="frmMain1\css\style.css" />
+    <Content Include="frmMain1\fonts\flaticon\flaticon.css" />
+    <Content Include="frmMain1\fonts\flaticon\flaticon.html" />
+    <Content Include="frmMain1\fonts\flaticon\Flaticon.svg" />
+    <Content Include="frmMain1\fonts\fontawesome-5-13-1\all.min.css" />
+    <Content Include="frmMain1\fonts\fontawesome-5-13-1\all.min.js" />
+    <Content Include="frmMain1\fonts\icomoon.svg" />
+    <Content Include="frmMain1\images\android-chrome-192x192.png" />
+    <Content Include="frmMain1\images\android-chrome-512x512.png" />
+    <Content Include="frmMain1\images\apple-touch-icon.png" />
+    <Content Include="frmMain1\images\cm-photo.jpg" />
+    <Content Include="frmMain1\images\DegitalQRcode.jpg" />
+    <Content Include="frmMain1\images\digital-gujarat-logo.png" />
+    <Content Include="frmMain1\images\DSIlogo.png" />
+    <Content Include="frmMain1\images\emblem-of-india-beta.png" />
+    <Content Include="frmMain1\images\emblem-of-india.png" />
+    <Content Include="frmMain1\images\favicon-16x16.png" />
+    <Content Include="frmMain1\images\favicon-32x32.png" />
+    <Content Include="frmMain1\images\favicon.ico" />
+    <Content Include="frmMain1\images\flaticons\birth.png" />
+    <Content Include="frmMain1\images\flaticons\death.png" />
+    <Content Include="frmMain1\images\flaticons\divorce.png" />
+    <Content Include="frmMain1\images\flaticons\domicile-certificate2.png" />
+    <Content Include="frmMain1\images\flaticons\education.png" />
+    <Content Include="frmMain1\images\flaticons\farmer.png" />
+    <Content Include="frmMain1\images\flaticons\health.png" />
+    <Content Include="frmMain1\images\flaticons\household.png" />
+    <Content Include="frmMain1\images\flaticons\income-certificate.png" />
+    <Content Include="frmMain1\images\flaticons\marriage.png" />
+    <Content Include="frmMain1\images\flaticons\non-creamy-layer-certificate.png" />
+    <Content Include="frmMain1\images\flaticons\retirement.png" />
+    <Content Include="frmMain1\images\flaticons\school.png" />
+    <Content Include="frmMain1\images\flaticons\travel.png" />
+    <Content Include="frmMain1\images\flaticons\work.png" />
+    <Content Include="frmMain1\images\govt_gujarat_logo.png" />
+    <Content Include="frmMain1\images\india-flag-24.png" />
+    <Content Include="frmMain1\images\logo-artd-white.png" />
+    <Content Include="frmMain1\images\logo-artd.png" />
+    <Content Include="frmMain1\images\logo-ditIndia.png" />
+    <Content Include="frmMain1\images\logo-NIC.png" />
+    <Content Include="frmMain1\images\logo.png" />
+    <Content Include="frmMain1\images\logos\digital-india.png" />
+    <Content Include="frmMain1\images\logos\gandhiji-150.png" />
+    <Content Include="frmMain1\images\logos\mygov.png" />
+    <Content Include="frmMain1\images\logos\swachchha-bharat.png" />
+    <Content Include="frmMain1\images\vijaybhai_rupani.png" />
+    <Content Include="frmMain1\js\bootstrap.min.js" />
+    <Content Include="frmMain1\js\DGlandingPage.js" />
+    <Content Include="frmMain1\js\jquery-3.4.1.slim.min.js" />
+    <Content Include="frmMain1\js\jquery.js" />
+    <Content Include="frmMain1\js\jquery.min.js" />
+    <Content Include="frmMain1\js\main.js" />
+    <Content Include="frmMain1\js\mega-menu.js" />
+    <Content Include="frmMain1\js\owl.carousel.min.js" />
+    <Content Include="frmMain1\js\owl.js" />
+    <Content Include="frmMain1\js\popper.min.js" />
+    <Content Include="frmMain1\js\script.js" />
+    <Content Include="frmMainLite.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\001-thumb.jpg" />
+    <Content Include="Images\001.jpg" />
+    <Content Include="Images\14gov5.jpg" />
+    <Content Include="Images\a-dark.gif" />
+    <Content Include="Images\a-light.gif" />
+    <Content Include="Images\about-01.jpg" />
+    <Content Include="Images\about-02.jpg" />
+    <Content Include="Images\about-03.jpg" />
+    <Content Include="Images\about-content-bg.png" />
+    <Content Include="Images\about.png" />
+    <Content Include="Images\agenda-select-arrow.png" />
+    <Content Include="Images\arm.png" />
+    <Content Include="Images\arm_hover.png" />
+    <Content Include="Images\arrow-icon-footer.png" />
+    <Content Include="Images\artd.jpg" />
+    <Content Include="Images\award1.JPG" />
+    <Content Include="Images\award2.JPG" />
+    <Content Include="Images\award3.JPG" />
+    <Content Include="Images\award4.JPG" />
+    <Content Include="Images\award5.JPG" />
+    <Content Include="Images\award6.JPG" />
+    <Content Include="Images\award7.JPG" />
+    <Content Include="Images\award8.JPG" />
+    <Content Include="Images\award9.JPG" />
+    <Content Include="Images\awards-icon.png" />
+    <Content Include="Images\awards.png" />
+    <Content Include="Images\a_data.png" />
+    <Content Include="Images\background.jpg" />
+    <Content Include="Images\backtotop.png" />
+    <Content Include="Images\banner-map-bg.png" />
+    <Content Include="Images\beaches_icon.png" />
+    <Content Include="Images\big.jpg" />
+    <Content Include="Images\blog-01.jpg" />
+    <Content Include="Images\blog-02.jpg" />
+    <Content Include="Images\blog-03.jpg" />
+    <Content Include="Images\blog-04.jpg" />
+    <Content Include="Images\bread_img.png" />
+    <Content Include="Images\buddh.png" />
+    <Content Include="Images\buddh_hover.png" />
+    <Content Include="Images\bulid.png" />
+    <Content Include="Images\bulid_hover.png" />
+    <Content Include="Images\bullet-arrow.png" />
+    <Content Include="Images\bullet-icon.png" />
+    <Content Include="Images\bullet-yello.png" />
+    <Content Include="Images\bus.png" />
+    <Content Include="Images\business.png" />
+    <Content Include="Images\bus_hover.png" />
+    <Content Include="Images\call-to-action.png" />
+    <Content Include="Images\certificate_common.png" />
+    <Content Include="Images\certificate_common_hover.png" />
+    <Content Include="Images\CloseButton.png" />
+    <Content Include="Images\cm-img.png" />
+    <Content Include="Images\custom-select-arrow-admin.png" />
+    <Content Include="Images\degital-india.jpg" />
+    <Content Include="Images\DegitalQRcode.jpg" />
+    <Content Include="Images\Digital-India-Logo.jpg" />
+    <Content Include="Images\digitalgujarat.jpeg" />
+    <Content Include="Images\DigitalIndia.png" />
+    <Content Include="Images\digitaltestgujarat.jpeg" />
+    <Content Include="Images\diguj.png" />
+    <Content Include="Images\directory.png" />
+    <Content Include="Images\directory_hover.png" />
+    <Content Include="Images\down-arrow.gif" />
+    <Content Include="Images\dst-gujarat.jpg" />
+    <Content Include="Images\DSTlogo.png" />
+    <Content Include="Images\ebackward.png" />
+    <Content Include="Images\ebackward_hover.png" />
+    <Content Include="Images\ecotourisam.png" />
+    <Content Include="Images\edu.png" />
+    <Content Include="Images\eduback.png" />
+    <Content Include="Images\eduback_hover.png" />
+    <Content Include="Images\education.png" />
+    <Content Include="Images\education_hover.png" />
+    <Content Include="Images\edu_img.jpg" />
+    <Content Include="Images\explore_gujarat.png" />
+    <Content Include="Images\facebook.svg" />
+    <Content Include="Images\fairs.png" />
+    <Content Include="Images\farmar.png" />
+    <Content Include="Images\farmar_hover.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\fax.png" />
+    <Content Include="Images\file-pdf.png" />
+    <Content Include="Images\file-ppt.png" />
+    <Content Include="Images\Focus1.jpg" />
+    <Content Include="Images\Focus10.jpg" />
+    <Content Include="Images\Focus11.jpg" />
+    <Content Include="Images\Focus12.jpg" />
+    <Content Include="Images\Focus13.jpg" />
+    <Content Include="Images\Focus14.jpg" />
+    <Content Include="Images\Focus15.jpg" />
+    <Content Include="Images\Focus16.jpg" />
+    <Content Include="Images\Focus2.jpg" />
+    <Content Include="Images\Focus3.jpg" />
+    <Content Include="Images\Focus4.jpg" />
+    <Content Include="Images\Focus5.jpg" />
+    <Content Include="Images\Focus6.jpg" />
+    <Content Include="Images\Focus7.jpg" />
+    <Content Include="Images\Focus8.jpg" />
+    <Content Include="Images\Focus9.jpg" />
+    <Content Include="Images\FocusArea\Focus1.jpg" />
+    <Content Include="Images\FocusArea\Focus2.jpg" />
+    <Content Include="Images\FocusArea\Focus3.jpg" />
+    <Content Include="Images\FocusArea\Focus4.jpg" />
+    <Content Include="Images\FocusArea\Focus5.jpg" />
+    <Content Include="Images\focus_area.png" />
+    <Content Include="Images\googlePlus.svg" />
+    <Content Include="Images\governer-img.png" />
+    <Content Include="Images\government.png" />
+    <Content Include="Images\gujarat-map-icon.png" />
+    <Content Include="Images\gujarat-official-state-portal.jpg" />
+    <Content Include="Images\GujaratLeadingWay\slide 10.JPG" />
+    <Content Include="Images\GujaratLeadingWay\slide 3.JPG" />
+    <Content Include="Images\GujaratLeadingWay\Slide 6.JPG" />
+    <Content Include="Images\GujaratLeadingWay\slide 7.JPG" />
+    <Content Include="Images\GujaratLeadingWay\slide 8.JPG" />
+    <Content Include="Images\GujaratLeadingWay\slide 9.JPG" />
+    <Content Include="Images\GujaratLeadingWay\slide1.JPG" />
+    <Content Include="Images\GujaratLeadingWay\slide6.JPG" />
+    <Content Include="Images\GujaratLeadingWay\slide7.JPG" />
+    <Content Include="Images\Gujarat_Map_New.png" />
+    <Content Include="Images\handicraft.png" />
+    <Content Include="Images\heritage.png" />
+    <Content Include="Images\home.png" />
+    <Content Include="Images\HomeIIM\10194_09.jpg" />
+    <Content Include="Images\HomeIIM\Adalaj_3.jpg" />
+    <Content Include="Images\HomeIIM\Kankariya1 %283%29.jpg" />
+    <Content Include="Images\HomeIIM\Kankariya2 %283%29.jpg" />
+    <Content Include="Images\HomeIIM\mahatmamandir.JPG" />
+    <Content Include="Images\HomeIIM\mahatmamandir_1.JPG" />
+    <Content Include="Images\HomeIIM\mahatmamandir_2.JPG" />
+    <Content Include="Images\HomeIIM\mahatmamandir_4.JPG" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps.jpg" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps1.jpg" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps10.jpeg" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps111.jpg" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps123.jpg" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps2.jpg" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps222.jpg" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps4.JPG" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps5.JPG" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps6.jpg" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps7.jpg" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps8.jpg" />
+    <Content Include="Images\HomeIIM\OnlineServiceDeliverySteps9.jpg" />
+    <Content Include="Images\home\attendrannutsav2015.jpg" />
+    <Content Include="Images\home\OnlineServiceDeliverySteps1.JPG" />
+    <Content Include="Images\home\OnlineServiceDeliverySteps10.jpeg" />
+    <Content Include="Images\home\OnlineServiceDeliverySteps2.JPG" />
+    <Content Include="Images\home\OnlineServiceDeliverySteps4.JPG" />
+    <Content Include="Images\home\OnlineServiceDeliverySteps5.JPG" />
+    <Content Include="Images\home\OnlineServiceDeliverySteps6.jpg" />
+    <Content Include="Images\home\OnlineServiceDeliverySteps7.jpg" />
+    <Content Include="Images\home\OnlineServiceDeliverySteps8.jpg" />
+    <Content Include="Images\home\OnlineServiceDeliverySteps9.jpg" />
+    <Content Include="Images\home_hover.png" />
+    <Content Include="Images\Horizontal-Icons.png" />
+    <Content Include="Images\hotel.png" />
+    <Content Include="Images\hotel_hover.png" />
+    <Content Include="Images\income.png" />
+    <Content Include="Images\income_hover.png" />
+    <Content Include="Images\inportant_policies.png" />
+    <Content Include="Images\job.png" />
+    <Content Include="Images\job_hover.png" />
+    <Content Include="Images\line-img.png" />
+    <Content Include="Images\litebox-close.png" />
+    <Content Include="Images\litebox-next.png" />
+    <Content Include="Images\litebox-prev.png" />
+    <Content Include="Images\location.png" />
+    <Content Include="Images\logo-dark.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\Logo.svg.png" />
+    <Content Include="Images\mail.png" />
+    <Content Include="Images\main-banner-bg.jpg" />
+    <Content Include="Images\map_bg.jpg" />
+    <Content Include="Images\marching_ahead.png" />
+    <Content Include="Images\menu-img.jpg" />
+    <Content Include="Images\mesuam.png" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\mis.png" />
+    <Content Include="Images\MobilappGOG.png" />
+    <Content Include="Images\MobilappBMC.png" />
+    <Content Include="Images\MobilappGT.png" />
+    <Content Include="Images\MobilappRMC.png" />
+    <Content Include="Images\MobilappSJ.png" />
+    <Content Include="Images\MobilappSMC.png" />
+    <Content Include="Images\MobilappSS.png" />
+    <Content Include="Images\MobilappSSJ.png" />
+    <Content Include="Images\mobile-application-cion.png" />
+    <Content Include="Images\mobile-menu.png" />
+    <Content Include="Images\mobile_apps.png" />
+    <Content Include="Images\mygovin.png" />
+    <Content Include="Images\news-section-bg.png" />
+    <Content Include="Images\new_icon_blink.gif" />
+    <Content Include="Images\nic-logo.png" />
+    <Content Include="Images\nic.jpg" />
+    <Content Include="Images\NIC1.png" />
+    <Content Include="Images\NIClogo.png" />
+    <Content Include="Images\OpenGov.png" />
+    <Content Include="Images\paly-icon.png" />
+    <Content Include="Images\panchyat.png" />
+    <Content Include="Images\panchyat_hover.png" />
+    <Content Include="Images\pause-btn.png" />
+    <Content Include="Images\phone.png" />
+    <Content Include="Images\play-pause-icon.png" />
+    <Content Include="Images\plus.png" />
+    <Content Include="Images\public.png" />
+    <Content Include="Images\ration.png" />
+    <Content Include="Images\ration_card.png" />
+    <Content Include="Images\ration_card_hover.png" />
+    <Content Include="Images\ration_hover.png" />
+    <Content Include="Images\Revenue.png" />
+    <Content Include="Images\Revenue_hover.png" />
+    <Content Include="Images\right-arrow.gif" />
+    <Content Include="Images\rone.png" />
+    <Content Include="Images\rtwo.png" />
+    <Content Include="Images\rupee.png" />
+    <Content Include="Images\ScholarShip.png" />
+    <Content Include="Images\ScholarShip_hover.png" />
+    <Content Include="Images\screen_reader.png" />
+    <Content Include="Images\search-icon.png" />
+    <Content Include="Images\search_btn.png" />
+    <Content Include="Images\sectors-icon.png" />
+    <Content Include="Images\senior.png" />
+    <Content Include="Images\seniorcitizen_hover.png" />
+    <Content Include="Images\senior_hover.png" />
+    <Content Include="Images\services.png" />
+    <Content Include="Images\services_hover.png" />
+    <Content Include="Images\service_banner.jpg" />
+    <Content Include="Images\service_banner.png" />
+    <Content Include="Images\service_news.jpg" />
+    <Content Include="Images\sidelogo.png" />
+    <Content Include="Images\skip_content.png" />
+    <Content Include="Images\slider-navigation.png" />
+    <Content Include="Images\small_cta.png" />
+    <Content Include="Images\social.png" />
+    <Content Include="Images\supply.png" />
+    <Content Include="Images\top-icons.png" />
+    <Content Include="Images\top.jpg" />
+    <Content Include="Images\torisum.png" />
+    <Content Include="Images\torisum_hover.png" />
+    <Content Include="Images\twitter.svg" />
+    <Content Include="Images\what%27s-new.png" />
+    <Content Include="Images\whats-new-title-bg.png" />
+    <Content Include="Images\whats_new.png" />
+    <Content Include="Images\white-custom-select-arrow.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\contact_me.js" />
+    <Content Include="js\function.js" />
+    <Content Include="js\functions.js" />
+    <Content Include="js\general.js" />
+    <Content Include="js\html5.js" />
+    <Content Include="js\ie.js" />
+    <Content Include="js\jqBootstrapValidation.js" />
+    <Content Include="js\jquery-2.1.1.min.js" />
+    <Content Include="js\jquery-2.2.2.min.js" />
+    <Content Include="js\jquery-3.1.0.min.js" />
+    <Content Include="js\jquery-min.js" />
+    <Content Include="js\jquery.appear.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\mainmap.js" />
+    <Content Include="js\MapsOnline.js" />
+    <Content Include="js\modernizr.custom.js" />
+    <Content Include="js\modernizr.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\search.min.js" />
+    <Content Include="js\searchIIM.min.js" />
+    <Content Include="SchemPortal\CopyrightPolicy.aspx" />
+    <Content Include="SchemPortal\Image\CivilAviation.png" />
+    <Content Include="SchemPortal\Image\COMPLAINT.png" />
+    <Content Include="SchemPortal\Image\Entertainment.png" />
+    <Content Include="SchemPortal\Image\fingerprint.png" />
+    <Content Include="SchemPortal\Image\HajGuidelines.png" />
+    <Content Include="SchemPortal\Image\highereducation.png" />
+    <Content Include="SchemPortal\Image\REVENUE.png" />
+    <Content Include="SchemPortal\Image\sainikwelfare&amp;resettlement.png" />
+    <Content Include="SchemPortal\Image\SkillDevelopment.png" />
+    <Content Include="SchemPortal\Image\Sport.png" />
+    <Content Include="SchemPortal\Image\Tourism.png" />
+    <Content Include="SchemPortal\Image\Training%28Stipend%29.png" />
+    <Content Include="SchemPortal\Image\Waterandsoilconservation.png" />
+    <Content Include="SchemPortal\Policies.aspx" />
+    <Content Include="Policies\PaymentTermsCondition.aspx" />
+    <Content Include="SchemPortal\ContactUs.aspx" />
+    <Content Include="SchemPortal\Image\AgriAnimal.gif" />
+    <Content Include="SchemPortal\Image\AgriAnimal.png" />
+    <Content Include="SchemPortal\Image\agricu.png" />
+    <Content Include="SchemPortal\Image\Agriculture.jpg" />
+    <Content Include="SchemPortal\Image\Animal.png" />
+    <Content Include="SchemPortal\Image\art.png" />
+    <Content Include="SchemPortal\Image\Bank.png" />
+    <Content Include="SchemPortal\Image\BankableScheme.jpg" />
+    <Content Include="SchemPortal\Image\birth.jpg" />
+    <Content Include="SchemPortal\Image\ChildWelfare.png" />
+    <Content Include="SchemPortal\Image\co-operative.png" />
+    <Content Include="SchemPortal\Image\community.png" />
+    <Content Include="SchemPortal\Image\CommunityDevelopment.jpg" />
+    <Content Include="SchemPortal\Image\death.jpg" />
+    <Content Include="SchemPortal\Image\Education.gif" />
+    <Content Include="SchemPortal\Image\Education.jpg" />
+    <Content Include="SchemPortal\Image\Education.png" />
+    <Content Include="SchemPortal\Image\employment.png" />
+    <Content Include="SchemPortal\Image\enterta.png" />
+    <Content Include="SchemPortal\Image\family.png" />
+    <Content Include="SchemPortal\Image\Fisheries.jpg" />
+    <Content Include="SchemPortal\Image\Fishers.png" />
+    <Content Include="SchemPortal\Image\food grains.png" />
+    <Content Include="SchemPortal\Image\Forest.jpg" />
+    <Content Include="SchemPortal\Image\Forest.png" />
+    <Content Include="SchemPortal\Image\General.jpg" />
+    <Content Include="SchemPortal\Image\General.png" />
+    <Content Include="SchemPortal\Image\gimg4.gif" />
+    <Content Include="SchemPortal\Image\GovtScm.gif" />
+    <Content Include="SchemPortal\Image\HajGuidelines2017.jpg" />
+    <Content Include="SchemPortal\Image\health.jpg" />
+    <Content Include="SchemPortal\Image\Health.png" />
+    <Content Include="SchemPortal\Image\HealthFam.gif" />
+    <Content Include="SchemPortal\Image\household.jpg" />
+    <Content Include="SchemPortal\Image\Housing.jpg" />
+    <Content Include="SchemPortal\Image\Housing.png" />
+    <Content Include="SchemPortal\Image\Housing2.png" />
+    <Content Include="SchemPortal\Image\hujj.png" />
+    <Content Include="SchemPortal\Image\icds.png" />
+    <Content Include="SchemPortal\Image\Icon-Welfare.png" />
+    <Content Include="SchemPortal\Image\indian-cow.gif" />
+    <Content Include="SchemPortal\Image\Industry.png" />
+    <Content Include="SchemPortal\Image\Insurance.jpg" />
+    <Content Include="SchemPortal\Image\Insurance.png" />
+    <Content Include="SchemPortal\Image\irrigation.jpg" />
+    <Content Include="SchemPortal\Image\Irrigation.png" />
+    <Content Include="SchemPortal\Image\jimg6.jpg" />
+    <Content Include="SchemPortal\Image\kala_karigari.png" />
+    <Content Include="SchemPortal\Image\Khadi.jpg" />
+    <Content Include="SchemPortal\Image\Khadi.png" />
+    <Content Include="SchemPortal\Image\Labour.png" />
+    <Content Include="SchemPortal\Image\Land.jpg" />
+    <Content Include="SchemPortal\Image\land.png" />
+    <Content Include="SchemPortal\Image\Malaria.png" />
+    <Content Include="SchemPortal\Image\Malariya2.png" />
+    <Content Include="SchemPortal\Image\marriage.jpg" />
+    <Content Include="SchemPortal\Image\mukline.gif" />
+    <Content Include="SchemPortal\Image\no-image.png" />
+    <Content Include="SchemPortal\Image\our_scheme77.jpg" />
+    <Content Include="SchemPortal\Image\petroleum-icon.png" />
+    <Content Include="SchemPortal\Image\power.png" />
+    <Content Include="SchemPortal\Image\Power1.png" />
+    <Content Include="SchemPortal\Image\PrimarySchool.png" />
+    <Content Include="SchemPortal\Image\Prisoners.png" />
+    <Content Include="SchemPortal\Image\pwd.png" />
+    <Content Include="SchemPortal\Image\retirement.jpg" />
+    <Content Include="SchemPortal\Image\school.jpg" />
+    <Content Include="SchemPortal\Image\school_icon_500.png" />
+    <Content Include="SchemPortal\Image\sc_st.png" />
+    <Content Include="SchemPortal\Image\ServiceDetails.png" />
+    <Content Include="SchemPortal\Image\ServiceList.png" />
+    <Content Include="SchemPortal\Image\SocialDefence.png" />
+    <Content Include="SchemPortal\Image\social_welfare.png" />
+    <Content Include="SchemPortal\Image\test.jpg" />
+    <Content Include="SchemPortal\Image\Transport.jpg" />
+    <Content Include="SchemPortal\Image\Transport.png" />
+    <Content Include="SchemPortal\Image\travel.jpg" />
+    <Content Include="SchemPortal\Image\Travel_Tourism_Icon.png" />
+    <Content Include="SchemPortal\Image\VillageDevelopment.jpg" />
+    <Content Include="SchemPortal\Image\Villege.png" />
+    <Content Include="SchemPortal\Image\water-supply.png" />
+    <Content Include="SchemPortal\Image\WaterSupply.jpg" />
+    <Content Include="SchemPortal\Image\women_welfare.png" />
+    <Content Include="SchemPortal\Image\work.jpg" />
+    <Content Include="SchemPortal\MoreDetails.aspx" />
+    <Content Include="SchemPortal\ResultData.aspx" />
+    <Content Include="SchemPortal\ServiceGroup.aspx" />
+    <Content Include="SchemPortal\SiteMap.aspx" />
+    <Content Include="SchemPortal\ViewForm.aspx" />
+    <Content Include="Script\jquery-1.10.2.min.js" />
+    <Content Include="Service References\DigitalGujaratPressRelease\DesignApp.DigitalGujaratPressRelease.LatestPressReleasesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\DigitalGujaratPressRelease\DesignApp.DigitalGujaratPressRelease.PressReleasesForResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Sitemap.aspx" />
+    <Content Include="Tablet.aspx" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\Poppins-bold.eot" />
+    <Content Include="fonts\Poppins-bold.ttf" />
+    <Content Include="fonts\Poppins-bold.woff" />
+    <Content Include="fonts\Poppins-Light.eot" />
+    <Content Include="fonts\Poppins-Light.ttf" />
+    <Content Include="fonts\Poppins-Light.woff" />
+    <Content Include="fonts\Poppins-Medium.eot" />
+    <Content Include="fonts\Poppins-Medium.ttf" />
+    <Content Include="fonts\Poppins-Medium.woff" />
+    <Content Include="fonts\Poppins-Regular.eot" />
+    <Content Include="fonts\Poppins-Regular.ttf" />
+    <Content Include="fonts\Poppins-Regular.woff" />
+    <Content Include="fonts\Poppins-SemiBold.eot" />
+    <Content Include="fonts\Poppins-SemiBold.ttf" />
+    <Content Include="fonts\Poppins-SemiBold.woff" />
+    <Content Include="frmMain1\css\bootstrap.min.css.map" />
+    <Content Include="frmMain1\fonts\flaticon\Flaticon.eot" />
+    <Content Include="frmMain1\fonts\flaticon\Flaticon.ttf" />
+    <Content Include="frmMain1\fonts\flaticon\Flaticon.woff" />
+    <Content Include="frmMain1\fonts\flaticon\Flaticon.woff2" />
+    <Content Include="frmMain1\fonts\flaticon\_flaticon.scss" />
+    <Content Include="frmMain1\fonts\icomoon.eot" />
+    <Content Include="frmMain1\fonts\icomoon.ttf" />
+    <Content Include="frmMain1\fonts\icomoon.woff" />
+    <Content Include="frmMain1\images\site.webmanifest" />
+    <Content Include="wsservice\WebService.asmx" />
+    <None Include="My Project\PublishProfiles\DesginApp.pubxml" />
+    <Content Include="Schem.Master" />
+    <None Include="Service References\DigitalGujaratPressRelease\digitalgujarat.disco" />
+    <None Include="Service References\DigitalGujaratPressRelease\configuration91.svcinfo" />
+    <None Include="Service References\DigitalGujaratPressRelease\configuration.svcinfo" />
+    <None Include="Service References\DigitalGujaratPressRelease\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="SH\frmNews.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cBaseForm.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citizen\CitizenService.aspx.designer.vb">
+      <DependentUpon>CitizenService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Citizen\CitizenService.aspx.vb">
+      <DependentUpon>CitizenService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citizen\ContactUs.aspx.designer.vb">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Citizen\ContactUs.aspx.vb">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citizen\frmcertificates.aspx.designer.vb">
+      <DependentUpon>frmcertificates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Citizen\frmcertificates.aspx.vb">
+      <DependentUpon>frmcertificates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citizen\frmIncomeCertificateInfo.aspx.designer.vb">
+      <DependentUpon>frmIncomeCertificateInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Citizen\frmIncomeCertificateInfo.aspx.vb">
+      <DependentUpon>frmIncomeCertificateInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citizen\frmServiceGroup.aspx.designer.vb">
+      <DependentUpon>frmServiceGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Citizen\frmServiceGroup.aspx.vb">
+      <DependentUpon>frmServiceGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citizen\MoreApps.aspx.designer.vb">
+      <DependentUpon>MoreApps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Citizen\MoreApps.aspx.vb">
+      <DependentUpon>MoreApps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citizen\MoreDepartment.aspx.designer.vb">
+      <DependentUpon>MoreDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Citizen\MoreDepartment.aspx.vb">
+      <DependentUpon>MoreDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citizen\ServiceDescription.aspx.designer.vb">
+      <DependentUpon>ServiceDescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Citizen\ServiceDescription.aspx.vb">
+      <DependentUpon>ServiceDescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSS\Common\cGlobal.vb" />
+    <Compile Include="CSS\Common\cParameter.vb" />
+    <Compile Include="DepartmentWiseServiceCount.aspx.designer.vb">
+      <DependentUpon>DepartmentWiseServiceCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentWiseServiceCount.aspx.vb">
+      <DependentUpon>DepartmentWiseServiceCount.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DisplayOffice.aspx.designer.vb">
+      <DependentUpon>DisplayOffice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayOffice.aspx.vb">
+      <DependentUpon>DisplayOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmEGram.aspx.designer.vb">
+      <DependentUpon>frmEGram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmEGram.aspx.vb">
+      <DependentUpon>frmEGram.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmEGram.Master.designer.vb">
+      <DependentUpon>frmEGram.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frmEGram.Master.vb">
+      <DependentUpon>frmEGram.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmGrampanchayatCount.aspx.designer.vb">
+      <DependentUpon>FrmGrampanchayatCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGrampanchayatCount.aspx.vb">
+      <DependentUpon>FrmGrampanchayatCount.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmMain.aspx.designer.vb">
+      <DependentUpon>frmMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.aspx.vb">
+      <DependentUpon>frmMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.vb">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.vb">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Download\Frmdownload.aspx.designer.vb">
+      <DependentUpon>Frmdownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Download\Frmdownload.aspx.vb">
+      <DependentUpon>Frmdownload.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FooterPages\CopyRightPolicy.aspx.designer.vb">
+      <DependentUpon>CopyRightPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FooterPages\CopyRightPolicy.aspx.vb">
+      <DependentUpon>CopyRightPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FooterPages\HyperlinkPolicy.aspx.designer.vb">
+      <DependentUpon>HyperlinkPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FooterPages\HyperlinkPolicy.aspx.vb">
+      <DependentUpon>HyperlinkPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FooterPages\PrivacyPolicy.aspx.designer.vb">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FooterPages\PrivacyPolicy.aspx.vb">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FooterPages\TermsofUse.aspx.designer.vb">
+      <DependentUpon>TermsofUse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FooterPages\TermsofUse.aspx.vb">
+      <DependentUpon>TermsofUse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMain1.aspx.designer.vb">
+      <DependentUpon>frmMain1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain1.aspx.vb">
+      <DependentUpon>frmMain1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMainLite.aspx.designer.vb">
+      <DependentUpon>frmMainLite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainLite.aspx.vb">
+      <DependentUpon>frmMainLite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.designer.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Scheme.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SchemPortal\CopyrightPolicy.aspx.designer.vb">
+      <DependentUpon>CopyrightPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchemPortal\CopyrightPolicy.aspx.vb">
+      <DependentUpon>CopyrightPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchemPortal\Policies.aspx.designer.vb">
+      <DependentUpon>Policies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchemPortal\Policies.aspx.vb">
+      <DependentUpon>Policies.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Policies\PaymentTermsCondition.aspx.designer.vb">
+      <DependentUpon>PaymentTermsCondition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Policies\PaymentTermsCondition.aspx.vb">
+      <DependentUpon>PaymentTermsCondition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schem.Master.designer.vb">
+      <DependentUpon>Schem.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Schem.Master.vb">
+      <DependentUpon>Schem.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchemPortal\ContactUs.aspx.designer.vb">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchemPortal\ContactUs.aspx.vb">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SchemPortal\MoreDetails.aspx.designer.vb">
+      <DependentUpon>MoreDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchemPortal\MoreDetails.aspx.vb">
+      <DependentUpon>MoreDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchemPortal\ResultData.aspx.designer.vb">
+      <DependentUpon>ResultData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchemPortal\ResultData.aspx.vb">
+      <DependentUpon>ResultData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchemPortal\ServiceGroup.aspx.designer.vb">
+      <DependentUpon>ServiceGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchemPortal\ServiceGroup.aspx.vb">
+      <DependentUpon>ServiceGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchemPortal\SiteMap.aspx.designer.vb">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchemPortal\SiteMap.aspx.vb">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchemPortal\ViewForm.aspx.designer.vb">
+      <DependentUpon>ViewForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchemPortal\ViewForm.aspx.vb">
+      <DependentUpon>ViewForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service References\DigitalGujaratPressRelease\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SH\frmNews.aspx.designer.vb">
+      <DependentUpon>frmNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SH\frmNews.aspx.vb">
+      <DependentUpon>frmNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitemap.aspx.designer.vb">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitemap.aspx.vb">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablet.aspx.designer.vb">
+      <DependentUpon>Tablet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablet.aspx.vb">
+      <DependentUpon>Tablet.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="wsservice\WebService.asmx.vb">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\frmMain.aspx.gu-IN.resx" />
+    <Content Include="App_LocalResources\frmMain.aspx.resx" />
+    <Content Include="App_LocalResources\Default.Master.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Default.Master.gu-IN.resx" />
+    <Content Include="Citizen\App_LocalResources\CitizenService.aspx.resx" />
+    <Content Include="Citizen\App_LocalResources\CitizenService.aspx.gu-IN.resx" />
+    <Content Include="Citizen\App_LocalResources\ContactUs.aspx.resx" />
+    <Content Include="Citizen\App_LocalResources\ContactUs.aspx.gu.resx" />
+    <Content Include="Citizen\App_LocalResources\frmIncomeCertificateInfo.aspx.gu.resx" />
+    <Content Include="App_LocalResources\ErrorPage.aspx.gu.resx" />
+    <Content Include="App_LocalResources\ErrorPage.aspx.resx" />
+    <Content Include="App_LocalResources\Sitemap.aspx.gu-IN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Sitemap.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\frmMain1.aspx.resx" />
+    <Content Include="App_LocalResources\frmMain1.aspx.gu-IN.resx" />
+    <Content Include="App_LocalResources\Schem.Master.gu-IN.resx" />
+    <Content Include="App_LocalResources\Schem.Master.resx" />
+    <Content Include="App_LocalResources\frmEGram.aspx.resx" />
+    <Content Include="App_LocalResources\frmEGram.aspx.gu-IN.resx" />
+    <Content Include="App_LocalResources\frmEGram.Master.resx" />
+    <Content Include="App_LocalResources\frmEGram.Master.gu-IN.resx" />
+    <EmbeddedResource Include="Citizen\App_LocalResources\frmIncomeCertificateInfo.aspx.resx" />
+    <EmbeddedResource Include="Citizen\App_LocalResources\frmcertificates.aspx.resx" />
+    <EmbeddedResource Include="Citizen\App_LocalResources\frmcertificates.aspx.gu.resx" />
+    <Content Include="Citizen\App_LocalResources\ServiceDescription.aspx.resx" />
+    <Content Include="Citizen\App_LocalResources\ServiceDescription.aspx.gu-IN.resx" />
+    <Content Include="Citizen\App_LocalResources\frmServiceGroup.aspx.resx" />
+    <Content Include="Citizen\App_LocalResources\MoreApps.aspx.resx" />
+    <Content Include="Citizen\App_LocalResources\MoreDepartment.aspx.resx" />
+    <Content Include="Citizen\App_LocalResources\frmServiceGroup.aspx.gu.resx" />
+    <Content Include="Citizen\App_LocalResources\MoreApps.aspx.gu.resx" />
+    <Content Include="Citizen\App_LocalResources\MoreDepartment.aspx.gu.resx" />
+    <Content Include="FooterPages\App_LocalResources\CopyRightPolicy.aspx.gu.resx" />
+    <Content Include="FooterPages\App_LocalResources\CopyRightPolicy.aspx.resx" />
+    <Content Include="FooterPages\App_LocalResources\HyperlinkPolicy.aspx.gu.resx" />
+    <Content Include="FooterPages\App_LocalResources\HyperlinkPolicy.aspx.resx" />
+    <Content Include="FooterPages\App_LocalResources\PrivacyPolicy.aspx.gu.resx" />
+    <Content Include="FooterPages\App_LocalResources\PrivacyPolicy.aspx.resx" />
+    <Content Include="FooterPages\App_LocalResources\TermsofUse.aspx.gu.resx" />
+    <Content Include="FooterPages\App_LocalResources\TermsofUse.aspx.resx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.Master" />
+    <Content Include="CSS\bootstrap-theme.css.map" />
+    <Content Include="CSS\bootstrap.css.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Download\Gujarati_IME_ 5.0.1.12.zip" />
+    <Content Include="Download\GujaratiEnabledComputer.pdf" />
+    <Content Include="Download\GujaratiIndicInput2_32-bit.zip" />
+    <Content Include="Download\GujaratiIndicInput2_64-bit.zip" />
+    <Content Include="Download\GujaratiIndicInput3_32-bit.zip" />
+    <Content Include="Download\GujaratiIndicInput3_64-bit.zip" />
+    <Content Include="bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrap\css\bootstrap.css.map" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\test.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\DigitalGujaratPressRelease\digitalgujarat.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppLib\LibApp\LibApp.vbproj">
+      <Project>{4d81e963-02b3-400d-aeb6-aa1295568cc3}</Project>
+      <Name>LibApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppLib\LibCommon\LibCommon.vbproj">
+      <Project>{08bf9310-34df-4ce2-93f6-f3fe7ac6c7c2}</Project>
+      <Name>LibCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartClientLibrary\DataAccessLayer\DataAccessLayer.vbproj">
+      <Project>{2839023b-87cd-4e3f-b971-ef63a257fd89}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\bin\gu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DigitalGujaratPressRelease\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>30764</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:30764/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

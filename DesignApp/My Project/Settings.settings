@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Setting" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">test</Value>
+    </Setting>
+    <Setting Name="service_url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost/Citizen/Citizen/CitizenWEBUI/CitizenLogin.aspx</Value>
+    </Setting>
+    <Setting Name="dounload_url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost/DesignApp/DownLoad/pdfforms/</Value>
+    </Setting>
+    <Setting Name="url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://digitalgujarattest.gujarat.gov.in1</Value>
+    </Setting>
+    <Setting Name="ErrorPage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ErrorPage.aspx</Value>
+    </Setting>
+    <Setting Name="ServiceCount" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="ErrorDisplay" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NICIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">164.100.53</Value>
+    </Setting>
+    <Setting Name="BSNL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">172.18</Value>
+    </Setting>
+    <Setting Name="GSWAN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="IP1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">172.16.31.201</Value>
+    </Setting>
+    <Setting Name="IP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10.154.2.74</Value>
+    </Setting>
+    <Setting Name="LoginURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.digitalgujarat.gov.in/loginapp</Value>
+    </Setting>
+    <Setting Name="RegistrationURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.digitalgujarat.gov.in/CitizenApp/Citizen/CitizenWEBUI/Registration.aspx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

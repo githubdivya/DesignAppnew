@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{4D81E963-02B3-400D-AEB6-AA1295568CC3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NIC.LibApp</RootNamespace>
+    <AssemblyName>LibApp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LibApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LibApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cDashBoard.vb" />
+    <Compile Include="cMap.vb" />
+    <Compile Include="cTReceipt_Citizen.vb" />
+    <Compile Include="cWriterLicence.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\LibApp.vbprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\LibApp.vbprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SmartClientLibrary\DataAccessLayer\DataAccessLayer.vbproj">
+      <Project>{2839023B-87CD-4E3F-B971-EF63A257FD89}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibCommon\LibCommon.vbproj">
+      <Project>{08BF9310-34DF-4CE2-93F6-F3FE7AC6C7C2}</Project>
+      <Name>LibCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\BusinessLayer.dll" />
+    <Content Include="bin\Debug\BusinessLayer.pdb" />
+    <Content Include="bin\Debug\BusinessLayer.xml" />
+    <Content Include="bin\Debug\DataAccessLayer.dll" />
+    <Content Include="bin\Debug\DataAccessLayer.pdb" />
+    <Content Include="bin\Debug\DataAccessLayer.xml" />
+    <Content Include="bin\Debug\LibApp.dll" />
+    <Content Include="bin\Debug\LibApp.pdb" />
+    <Content Include="bin\Debug\LibApp.xml" />
+    <Content Include="bin\Debug\LibCommon.dll" />
+    <Content Include="bin\Debug\LibCommon.pdb" />
+    <Content Include="bin\Debug\LibCommon.xml" />
+    <Content Include="bin\Release\BusinessLayer.dll" />
+    <Content Include="bin\Release\BusinessLayer.pdb" />
+    <Content Include="bin\Release\BusinessLayer.xml" />
+    <Content Include="bin\Release\DataAccessLayer.dll" />
+    <Content Include="bin\Release\DataAccessLayer.pdb" />
+    <Content Include="bin\Release\DataAccessLayer.xml" />
+    <Content Include="bin\Release\LibApp.dll" />
+    <Content Include="bin\Release\LibApp.pdb" />
+    <Content Include="bin\Release\LibApp.xml" />
+    <Content Include="bin\Release\LibCommon.dll" />
+    <Content Include="bin\Release\LibCommon.pdb" />
+    <Content Include="bin\Release\LibCommon.xml" />
+    <Content Include="obj\Debug\LibApp.dll" />
+    <Content Include="obj\Debug\LibApp.pdb" />
+    <Content Include="obj\Debug\LibApp.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\LibApp.xml" />
+    <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="obj\Release\LibApp.dll" />
+    <Content Include="obj\Release\LibApp.pdb" />
+    <Content Include="obj\Release\LibApp.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\LibApp.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

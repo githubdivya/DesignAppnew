@@ -1,0 +1,275 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="frmEGram.master.vb" Inherits="DesignApp.frmEGram" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Required favicon tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="~/frmmain1/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="~/frmmain1/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="~/frmmain1/images/favicon-16x16.png" />
+    <link rel="manifest" href="~/frmmain1/images/site.webmanifest" />
+
+    <!-- Icon Fonts -->
+    <link rel="stylesheet" type="text/css" href="~/frmMain1/fonts/fontawesome-5-13-1/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/frmMain1/fonts/flaticon/flaticon.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="~/frmMain1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/frmMain1/css/owl.css" />
+    <link rel="stylesheet" type="text/css" href="~/frmMain1/css/style.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <title>Digital Gujarat</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <section class="header-section bg-delta pb-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="dg-logo">
+                            <a href='<%=ResolveUrl("~/frmEGram.aspx")%>'>
+                             
+                                <img src='<%=ResolveUrl("~/frmMain1/images/logo-sevasetu.png")%>' alt="Digital Seva Setu" class="img-fluid" />                                
+                            </a>
+                        </div>
+                        <!-- dg-logo ends -->
+                    </div>
+                    <div  class="col-lg-6 col-md-6 text-center">
+                        <img class="emblem-of-india" src='<%=ResolveUrl("~/frmMain1/images/android-chrome-192x192.png")%>' alt="emblem" />
+                        <h1 class="text-center text-2xl text-capitalize weight-700 m-0 text-alpha"><asp:Localize ID="localize1Resource11"   runat="server" meta:resourcekey="localize1Resource11" Text="Government of Gujarat"></asp:Localize></h1>
+                    </div>
+                    <!-- col ends -->
+                    <div class="col-lg-3 col-md-12">
+                        <div class="dg-top-nav">
+                            <ul>
+                                  <li> <asp:LinkButton ID="btnLangEnglish" runat="server" meta:resourcekey="enResource1" Text="English"></asp:LinkButton></li> 
+                              <li>  <asp:LinkButton ID="btnLangGujarati" runat="server" meta:resourcekey="guResource1" Text="ગુજરાતી"></asp:LinkButton></li>
+
+                                <li><a href="#" id="btn-decrease">A-</a></li>
+                                <li><a href="#" id="btn-orig">A</a></li>
+                                <li><a href="#" id="btn-increase">A+</a></li>
+                            </ul>
+                            <ul class="mt-1">
+
+                                 <li>
+                                    <a href="https://digitalsevasetu.gujarat.gov.in/PanchayatApp/Office/Dashboard/eGram_Dashboard1.aspx" class="text-blue">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                        <span><asp:Localize ID="localize1Resource27"   runat="server" meta:resourcekey="localize1Resource27" Text="Dashboard"></asp:Localize></span>
+                                    </a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="https://www.digitalgujarat.gov.in/CitizenApp/Citizen/CitizenWEBUI/Registration.aspx" class="text-blue">
+                                        <i class="fas fa-handshake"></i>
+                                        <span><asp:Localize ID="localize1Resource12"   runat="server" meta:resourcekey="localize1Resource12" Text="Register"></asp:Localize></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.digitalgujarat.gov.in/loginapp/CitizenLogin.aspx" class="text-beta">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        <span><asp:Localize ID="localize1Resource13"   runat="server" meta:resourcekey="localize1Resource13" Text="Login"></asp:Localize></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- dg-top-nav ends -->
+                    </div>
+                    <!-- col ends -->
+                </div>
+                <!-- row ends -->
+            </div>
+            <!-- container ends -->
+        </section>
+        
+
+        <%-- Contant Palce holder Start  --%>
+
+<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <%-- Contant Palce holder End  --%>
+
+
+        <section class="footer-section bg-gamma">
+            <footer>
+                <div class="container">
+
+                    <%--<div class="row mb-5">
+                        <div class="col-md-12 col-lg-2">
+                            <div class="dg-emblem">
+                                <img src='<%=ResolveUrl("~/frmMain1/images/emblem-of-india-beta.png")%>' alt="Digital Gujarat">
+                            </div>
+                            <!-- dg-emblem ends -->
+                        </div>
+                        <!-- col ends -->
+                        <div class="col-md-12 col-lg-10">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dg-foot-menu">
+                                        <ul>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource14"   runat="server" meta:resourcekey="localize1Resource14" Text="about the portal"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource15"   runat="server" meta:resourcekey="localize1Resource15" Text="grievance redressal"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource16"   runat="server" meta:resourcekey="localize1Resource16" Text="feedback"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource17"   runat="server" meta:resourcekey="localize1Resource17" Text="FAQs"></asp:Localize></a></li>                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- col ends -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dg-foot-menu">
+                                        <ul>
+                                            
+                                            <li><a href="#"><asp:Localize ID="localize1Resource18"   runat="server" meta:resourcekey="localize1Resource18" Text="terms of use"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource19"   runat="server" meta:resourcekey="localize1Resource19" Text="disclaimer"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource20"   runat="server" meta:resourcekey="localize1Resource20" Text="copyright"></asp:Localize></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- col ends -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dg-foot-menu">
+                                        <ul>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource21"   runat="server" meta:resourcekey="localize1Resource21" Text="site map"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource22"   runat="server" meta:resourcekey="localize1Resource22" Text="downloads"></asp:Localize></a></li>                                            
+                                            <li><a href="#"><asp:Localize ID="localize1Resource23"   runat="server" meta:resourcekey="localize1Resource23" Text="accessibility statement"></asp:Localize></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- col ends -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dg-foot-menu">
+                                        <ul>
+                                             <li><a href="#"><asp:Localize ID="localize1Resource24"   runat="server" meta:resourcekey="localize1Resource24" Text="link to us"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource25"   runat="server" meta:resourcekey="localize1Resource25" Text="help"></asp:Localize></a></li>
+                                            <li><a href="#"><asp:Localize ID="localize1Resource26"   runat="server" meta:resourcekey="localize1Resource26" Text="contact us"></asp:Localize></a></li>                                           
+                                        </ul>
+                                    </div>                               
+                                </div>
+                                <!-- col ends -->
+                            </div>
+                            <!-- row ends -->
+                        </div>
+                        <!-- col ends -->
+                    </div>--%>
+                    <!-- row ends -->
+
+                    <div class="row mb-5 align-items-center">
+                        <div class="col-3">
+                            <div class="dg-emblem">
+                                <img src='<%=ResolveUrl("~/frmMain1/images/emblem-of-india-beta.png")%>' alt="Digital Gujarat" />
+                            </div>
+                            <!-- dg-emblem ends -->
+                        </div>
+                        <div class="col-9">
+                             <div class="dg-footer-logos">
+                                <div class="dg-f-l-item">
+                                    <a href="#">
+                                        <img src='<%=ResolveUrl("~/frmMain1/images/logos/digital-india.png")%>' alt="Digital Gujarat" /></a>
+                                </div>
+                                <div class="dg-f-l-item">
+                                    <a href="#">
+                                        <img src='<%=ResolveUrl("~/frmMain1/images/logos/swachchha-bharat.png")%>' alt="swachchha-bharat" /></a>
+                                </div>
+                                <div class="dg-f-l-item">
+                                    <a href="#">
+                                        <img src='<%=ResolveUrl("~/frmMain1/images/logos/gandhiji-150.png")%>' alt="gandhiji-150" /></a>
+                                </div>
+                                <div class="dg-f-l-item">
+                                    <a href="#">
+                                        <img src='<%=ResolveUrl("~/frmMain1/images/logos/mygov.png")%>' alt="mygov"/></a>
+                                </div>
+                                <div class="dg-f-l-item">
+                                    <a href="#">
+                                        <img src='<%=ResolveUrl("~/frmMain1/images/logos/nic.png")%>' alt="nic" /></a>
+                                </div>
+                            </div>
+                            <!-- dg-footer-logos ends -->
+                        </div>
+                        <!-- col ends -->
+                    </div>
+                    <!-- row ends -->
+
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="dg-footer-stats">
+                                <ul>
+                                    <li><span>Last Updated On:</span> <span class="weight-700">26-09-2020</span></li>
+                                    <li><span>Visitor Count:</span> <span class="weight-700">50</span></li>
+                                    <li><span>Website Version:</span> <span class="weight-700">1.0.78</span></li>
+                                </ul>
+                            </div>
+                            <!-- dg-footer-stats ends -->
+                        </div>
+                        <!-- col ends -->
+                    </div>
+                    <!-- row ends -->
+
+                    <div class="row mb-4">
+                         <div class="col-lg-12 mb-2">
+                            <div class="design-dev">
+                                 Web Application Designed & Developed by : <a href="https://guj.nic.in/" target ="_blank"> National Informatics Centre</a>, Gujarat State Centre
+                            </div>
+                            <!-- dg-browser-info ends -->
+                        </div>
+                      
+                    </div>
+
+                    <div class="row">
+
+
+                       
+
+
+
+                        <div class="col-lg-8">
+                            <div class="dg-browser-info">
+                                Website is best viewed with 1280 X 800 resolution in Firefox 64.0 / Chrome 72.0 or above.
+                            </div>
+                            <!-- dg-browser-info ends -->
+                        </div>
+                        <!-- col ends -->
+                        <div class="col-lg-4">
+                            <div class="dg-copyright">
+                                <i class="far fa-copyright"></i>Digital Gujarat 2020. All Rights Reserved.
+                            </div>
+                            <!-- dg-copyright ends -->
+                        </div>
+                        <!-- col ends -->
+                    </div>
+                    <!-- row ends -->
+
+                </div>
+                <!-- container ends -->
+            </footer>
+        </section>
+        <button class="scroll-top scroll-to-target open" data-target="html">
+            <span class=""><i class="fas fa-arrow-up"></i></span>
+        </button>
+    </form>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/jquery.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/popper.min.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/bootstrap.min.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/fonts/fontawesome-5-13-1/all.min.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/owl.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/mega-menu.js")%>'></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/frmMain1/js/main.js")%>'></script>
+</body>
+</html>
